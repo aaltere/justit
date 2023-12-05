@@ -34,8 +34,6 @@
             <label for="driving-yes">Yes</label>
             <input type="radio" id="driving-no" name="driving">
             <label for="driving-no">No</label>
-            <br>
-            <br>
 
             <p><label for="employment-status">Current employment status:</label></p>
             <select id="employment-status">
@@ -48,10 +46,18 @@
             <br>
 
             <label for="cv">Please upload your CV:</label>
-            <input type="file" id="cv" accept=".doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+            <input type="file" id="cv" accept=".doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" required>
 
             <p><label for="cover-letter">Cover Letter:</label></p>
             <textarea id="cover-letter" rows="8" cols="50">Enter cover letter here...</textarea>
+            <br>
+            <br>
+
+            <input type="checkbox" id="newsletter">
+            <label for="newsletter">I would like to subscribe to the newsletter.</label>
+            <br>
+            <input type="checkbox" id="tas" required>
+            <label for="tas">I have read and agree to the privacy policy</label>
             <br>
             <br>
 
