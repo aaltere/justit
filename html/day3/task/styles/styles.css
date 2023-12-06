@@ -114,8 +114,30 @@ main {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    
+
     font-weight: 100;
     color: #1f2937;
     max-width: 900px;
+}
+
+/* Footer declarations */
+
+footer {
+    background-color: #FF90BC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 50px;
+}
+
+footer .inner {
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    font-size: 18px;
+    color: #F9F9E0;
+    text-align: center;
 }
