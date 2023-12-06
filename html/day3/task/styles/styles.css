@@ -1,0 +1,16 @@
+html {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.inner {
+    display: flex;
+    flex: 0 1 1200px;
+}
