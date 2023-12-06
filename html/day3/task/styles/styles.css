@@ -1,3 +1,5 @@
+/* Universal Declarions */
+
 html {
     font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
@@ -13,4 +15,37 @@ body {
 .inner {
     display: flex;
     flex: 0 1 1200px;
+}
+
+/* Header declarations */
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #1f2937;
+}
+
+header .inner {
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    font-size: 24px;
+    color: #f9f1f8;
+}
+
+header ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    gap: 30px;
+}
+
+header a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #e5e7eb;
 }
