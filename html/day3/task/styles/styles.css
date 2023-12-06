@@ -97,3 +97,25 @@ main {
     justify-content: center;
     align-items: center;
 }
+
+/* Page 2 declarations */
+
+.page-2 {
+    display: flex;
+    min-width: 100vw;
+    min-height: 450px;
+    justify-content: center;
+    align-items: center;
+    background-color: #e5e7eb;
+}
+
+.page-2 .inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    font-weight: 100;
+    color: #1f2937;
+    max-width: 900px;
+}
