@@ -91,18 +91,6 @@ main {
     color: #F9F9E0;
 }
 
-.page-1 button {
-    background-color: #8ACDD7;
-    color: black;
-    font-weight: bold;
-    font-size: 18px;
-    border: none;
-    border-radius: 5px;
-    width: 120px;
-    height: 30px;
-    cursor: pointer;
-}
-
 .page-1 .video {
     background-color: rgba(200, 200, 200, 0.5);
     display: flex;
