@@ -24,7 +24,7 @@ header {
     justify-content: center;
     align-items: center;
 
-    background-color: #1f2937;
+    background-color: #FF90BC;
 }
 
 header .inner {
@@ -34,7 +34,7 @@ header .inner {
 
 h1 {
     font-size: 24px;
-    color: #f9f1f8;
+    color: #F9F9E0;
 }
 
 header ul {
@@ -47,5 +47,65 @@ header ul {
 header a {
     text-decoration: none;
     font-size: 18px;
-    color: #e5e7eb;
+    color: #F9F9E0;
+}
+
+/* Page 1 declarations */
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page-1 {
+    display: flex;
+    background-color: #FF90BC;
+    min-width: 100vw;
+    min-height: 450px;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-1 .inner {
+    gap: 150px;
+}
+
+.page-1 .text {
+    flex: 3;
+}
+
+.page-1 .img {
+    flex: 4;
+}
+
+.page-1 h2 {
+    font-size: 48px;
+    font-weight: 800;
+    color: #F9F9E0;
+    margin: 0;
+}
+
+.page-1 p {
+    font-size: 18px;
+    color: #F9F9E0;
+}
+
+.page-1 button {
+    background-color: #8ACDD7;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    width: 120px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.page-1 .video {
+    background-color: rgba(200, 200, 200, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
