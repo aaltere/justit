@@ -120,6 +120,10 @@ main {
     max-width: 900px;
 }
 
+.page-2 iframe {
+    height: 300px;
+}
+
 /* Footer declarations */
 
 footer {
