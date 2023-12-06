@@ -50,13 +50,15 @@ h1 {
     color: #F9F9E0;
 }
 
-/* Page 1 declarations */
+/* Declarations for main block */
 
 #main {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
+/* Page 1 declarations */
 
 .page-1 {
     display: flex;
