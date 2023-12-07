@@ -21,6 +21,7 @@
 h1 {
     background-color: darkgreen;
     color: orange;
+    text-align: center;
 }
 
 /* If more than one instance of an element will apply styling to all */
