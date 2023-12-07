@@ -24,3 +24,17 @@ p {
     background-color: rgb(100, 0, 50);
     color: rgb(0, 179, 255);
 }
+
+/* Class Selector */
+
+/* Select elements by their class attributes */
+
+.list {
+    background-color: aqua;
+    color: red;
+}
+
+.even {
+    background-color: blueviolet;
+    color: yellow;
+}
