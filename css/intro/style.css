@@ -2,6 +2,10 @@
     background-color: aqua;
 } */
 
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 /* Element Selector */
 
 /* Selects all elements of the desired type in the document */
