@@ -1,0 +1,149 @@
+/* Universal Declarions */
+
+html {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.inner {
+    display: flex;
+    flex: 0 1 1200px;
+}
+
+/* Header declarations */
+
+#header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #FF90BC;
+}
+
+#header .inner {
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    font-size: 24px;
+    color: #F9F9E0;
+}
+
+#header ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    gap: 30px;
+}
+
+#header a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #F9F9E0;
+}
+
+/* Declarations for main block */
+
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Page 1 declarations */
+
+.page-1 {
+    display: flex;
+    background-color: #FF90BC;
+    min-width: 100vw;
+    min-height: 450px;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-1 .inner {
+    gap: 150px;
+}
+
+.page-1 .text {
+    flex: 3;
+}
+
+.page-1 .video {
+    flex: 4;
+}
+
+.page-1 h2 {
+    font-size: 48px;
+    font-weight: 800;
+    color: #F9F9E0;
+    margin: 0;
+}
+
+.page-1 p {
+    font-size: 18px;
+    color: #F9F9E0;
+}
+
+.page-1 .video {
+    background-color: rgba(200, 200, 200, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Page 2 declarations */
+
+.page-2 {
+    display: flex;
+    min-width: 100vw;
+    min-height: 450px;
+    justify-content: center;
+    align-items: center;
+    background-color: #e5e7eb;
+}
+
+.page-2 .inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    font-weight: 100;
+    color: #1f2937;
+    max-width: 900px;
+}
+
+.page-2 iframe {
+    height: 300px;
+}
+
+/* Footer declarations */
+
+#footer {
+    background-color: #FF90BC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 50px;
+}
+
+#footer .inner {
+    justify-content: center;
+    align-items: center;
+}
+
+#footer p {
+    font-size: 18px;
+    color: #F9F9E0;
+    text-align: center;
+}
