@@ -39,6 +39,10 @@ p {
     color: yellow;
 }
 
+/* Group Selector */
+
+/* Allows us to chain selectors and grab all that apply */
+
 h2, h3, h4 {
     background-color: orange;
     color: chartreuse;
