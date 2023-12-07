@@ -37,14 +37,14 @@ h1 {
     color: #F9F9E0;
 }
 
-header ul {
+nav ul {
     display: flex;
     list-style-type: none;
     padding: 0;
     gap: 30px;
 }
 
-header a {
+nav a {
     text-decoration: none;
     font-size: 18px;
     color: #F9F9E0;
