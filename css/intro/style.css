@@ -1,0 +1,26 @@
+/* * {
+    background-color: aqua;
+} */
+
+/* Element Selector */
+
+/* Selects all elements of the desired type in the document */
+h1 {
+    background-color: darkgreen;
+    color: orange;
+}
+
+/* If more than one instance of an element will apply styling to all */
+p {
+    background-color: rgb(0, 8, 100);
+    color: rgb(255, 0, 166);
+}
+
+/* ID Selector */
+
+/* Select an element by its ID */
+
+#p2 {
+    background-color: rgb(100, 0, 50);
+    color: rgb(0, 179, 255);
+}
