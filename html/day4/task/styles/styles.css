@@ -19,7 +19,7 @@ body {
 
 /* Header declarations */
 
-#header {
+header {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,7 +27,7 @@ body {
     background-color: #FF90BC;
 }
 
-#header .inner {
+header .inner {
     justify-content: space-between;
     align-items: center;
 }
@@ -37,14 +37,14 @@ h1 {
     color: #F9F9E0;
 }
 
-#header ul {
+header ul {
     display: flex;
     list-style-type: none;
     padding: 0;
     gap: 30px;
 }
 
-#header a {
+header a {
     text-decoration: none;
     font-size: 18px;
     color: #F9F9E0;
@@ -52,7 +52,7 @@ h1 {
 
 /* Declarations for main block */
 
-#main {
+main {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -128,7 +128,7 @@ h1 {
 
 /* Footer declarations */
 
-#footer {
+footer {
     background-color: #FF90BC;
     display: flex;
     justify-content: center;
@@ -137,12 +137,12 @@ h1 {
     min-height: 50px;
 }
 
-#footer .inner {
+footer .inner {
     justify-content: center;
     align-items: center;
 }
 
-#footer p {
+footer p {
     font-size: 18px;
     color: #F9F9E0;
     text-align: center;
