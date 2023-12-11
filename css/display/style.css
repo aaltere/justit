@@ -31,3 +31,11 @@ span {
     font-weight: 800;
     font-size: 1.2em;
 }
+
+/* This is how to hide an element using the display property
+
+p {
+    display: none;
+}
+
+*/
