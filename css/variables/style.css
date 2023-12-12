@@ -1,0 +1,13 @@
+:root {
+    --darkblue: #023047;
+    --orangeyellow: #fb8500;
+    --spacing: 10px;
+}
+
+article {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--darkblue);
+    color: var(--orangeyellow);
+    padding: var(--spacing);
+    margin: var(--spacing);
+}
