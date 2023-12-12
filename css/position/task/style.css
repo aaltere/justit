@@ -33,3 +33,9 @@ main {
     margin: auto;
     margin-top: 150px;
 }
+
+img {
+    width: 300px;
+    position: sticky;
+    top: 150px;
+}
