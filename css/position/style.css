@@ -15,5 +15,10 @@
 /* Positon Examples Below:  */
 
 .box1 {
-    position: static;
+    /* position: static; */
+    
+    position: relative;
+    /* top: 200px;
+    left: 200px; */
 }
+
