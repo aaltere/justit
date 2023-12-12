@@ -11,3 +11,7 @@ article {
     padding: var(--spacing);
     margin: var(--spacing);
 }
+
+#article2 {
+    --darkblue: #0f9a00;
+}
