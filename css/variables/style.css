@@ -1,3 +1,4 @@
+/* Declare variables in the :root selector */
 :root {
     --darkblue: #023047;
     --orangeyellow: #fb8500;
