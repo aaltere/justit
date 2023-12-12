@@ -22,3 +22,8 @@
     left: 200px; */
 }
 
+.box2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
