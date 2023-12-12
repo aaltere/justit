@@ -25,6 +25,10 @@
     /* position: fixed;
     top: 500px;
     right: 0; */
+
+    position: sticky;
+    top: 0;
+    bottom: 0;
 }
 
 .box2 {
