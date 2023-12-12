@@ -17,13 +17,14 @@
 .box1 {
     /* position: static; */
     
+    /* Allows us to offset an element based on its natural starting point */
     position: relative;
-    top: 200px;
-    left: 200px;
 }
 
 .box2 {
     position: absolute;
-    bottom: 0;
-    right: 0;
+    /* Positions the element absolutely inside its closest NON-STATIC position element */
+    /* Otherwise it will be positioned absolutely in the viewport (browser) */
+    bottom: 50px;
+    right: 50px;
 }
