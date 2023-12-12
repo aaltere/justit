@@ -11,3 +11,9 @@
     background-color: crimson;
     border: 2px solid black;
 }
+
+/* Positon Examples Below:  */
+
+.box1 {
+    position: static;
+}
