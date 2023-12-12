@@ -1,0 +1,14 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+body {
+    width: 800px;
+    margin: auto;
+    background-color: #d1d1d1;
+}
