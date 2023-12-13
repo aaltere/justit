@@ -36,3 +36,56 @@ h1 {
 
 /* Flexbox Vode- Below */
 
+.container {
+    display: flex;
+
+    /* flex-direction - Controls our main axis */
+    /* set to row by default */
+    flex-direction: row;
+
+    /* flex-wrap - Controls how or if our elements will */
+    /* wrap if the container is too small to fit them */
+    /*  No wrap is the default setting */
+    flex-wrap: nowrap;
+
+    /* justify-content - Controls how elements are distributed */
+    /* across the main axis */
+    /* Set to flex-start by default */
+    justify-content: flex-start;
+
+    /* align-items - How we align elements on the secondary axis */
+    /* Set to stretch by default */
+    align-items: stretch;
+
+    /* align-content - Controls how elements are aligned */
+    /* on our secondary axis *Only* if flex wrap is in effect */
+    /*  */
+    align-content: stretch;
+}
+
+.box1 {
+    /* align-self - Allows us to align indivial items */
+    /* align-self: center; */
+
+    /* flex-basis - Set a minimum width for our elements */
+    /* if the container provides enough space */
+    flex-basis: 300px;
+
+    /* flex-grow - Takes a number value */
+    /* Sets the rate at which an element will grow into */
+    /* available space */
+    /* flex-grow: 1; */
+
+    /* flex-shrink - Is the reverse of the-grow */
+    flex-shrink: 1;
+
+}
+
+.box2 {
+    flex-basis: 300px;
+    /* flex-grow: 2; */
+}
+
+.box3 {
+    flex-basis: 300px;
+}
