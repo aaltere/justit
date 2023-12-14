@@ -21,5 +21,18 @@
 
 .container {
     display: grid;
+
+    /* GTC - sets the amount of columns in the grid and is specified */
+    /* by the number of units passed or with the repeat method */
+    /* grid-template-columns: repeat(3, 1fr); */
     grid-template-columns: 2fr 1fr;
+
+
+    /* GTR - works in a similar way to the GTC however won't automatically */
+    /* follow the same pattern */
+    /* grid-template-rows: 300px 300px; */
+
+    /* column-gap: 5px; */
+    /* row-gap: 5px; */
+    gap: 5px;
 }
