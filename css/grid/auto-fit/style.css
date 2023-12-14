@@ -18,3 +18,16 @@
 }
 
 /* CSS GRID CODE BELOW: */
+
+.container {
+    display: grid;
+    /* grid-template-columns: repeat(3, 1fr); */
+
+    /* GAR - defines the height of all automatically created rows */
+    /* grid-auto-rows: 100px; */
+    /* minmax() allows us to set a minimum and maximum height */
+    /* can be set to auto to adjust depending on content */
+    /* grid-auto-rows: minmax(100px, auto); */
+
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
