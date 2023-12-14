@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Base Styling to differentiate each grid item */
+
+.container div {
+    background-color: crimson;
+    padding: 1em;
+}
+
+.container div:nth-child(odd) {
+    background-color: dodgerblue;
+}
+
+/* CSS GRID CODE BELOW: */
