@@ -18,3 +18,36 @@
 }
 
 /* CSS GRID CODE BELOW: */
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 150px 320px 320px 150px;
+    gap: 0.5em;
+
+    grid-template-areas: 
+        "header header header header"
+        "main main main aside"
+        "main main main section"
+        "footer footer footer footer";
+}
+
+.header {
+    grid-area: header;
+}
+
+.main {
+    grid-area: main;
+}
+
+.section {
+    grid-area: section;
+}
+
+.aside {
+    grid-area: aside;
+}
+
+.footer {
+    grid-area: footer;
+}
