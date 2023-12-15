@@ -79,3 +79,32 @@ main .card {
         grid-column: 2 / span 10;
     }
 }
+
+@media (max-width: 550px) {
+
+    header {
+        padding: 20px 0px;
+    }
+
+    header h1 {
+        grid-column: span 12;
+        text-align: center;
+    }
+
+    header nav {
+        grid-column: span 12;
+        justify-self: center;
+    }
+
+    main img {
+        grid-column: span 12;
+    }
+
+    main .welcome {
+        grid-column: span 12;
+    }
+
+    main .card {
+        grid-column: span 12;
+    }
+}
