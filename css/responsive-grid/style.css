@@ -58,7 +58,7 @@ main h3 {
     text-decoration: underline;
 }
 
-main article {
+main .card {
     text-align: center;
     grid-column: span 4;
     background-color: #3c6e71;
