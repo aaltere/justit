@@ -64,3 +64,18 @@ main article {
     background-color: #3c6e71;
     padding: 10px 20px;
 }
+
+@media (max-width: 1100px) {
+
+    main img {
+        grid-column: 2 / span 10;
+    }
+
+    main .welcome {
+        grid-column: 2 / span 10;
+    }
+
+    main .card {
+        grid-column: 2 / span 10;
+    }
+}
