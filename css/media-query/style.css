@@ -42,3 +42,40 @@ body {
     flex-direction: column;
     align-items: center;
 }
+
+/* Media Query to apply new style once the browser is less */
+/* than 900px wide */
+
+/* Breakpoint - 900px */
+/* Breakpoint is a defined size at which we wish to apply a change */
+/* of css styling */
+
+@media (max-width: 900px) {
+
+    body {
+        background-color: #a9001c;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .tablet {
+        display: flex;
+    }
+}
+
+@media (max-width: 500px) {
+    body {
+        background-color: #007d1f;
+    }
+
+    .tablet {
+        display: none;
+    }
+
+    .smartphone {
+        display: flex;
+        font-size: 2rem;
+    }
+}
