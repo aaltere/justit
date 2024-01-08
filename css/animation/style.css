@@ -38,3 +38,8 @@
         background-color: yellow;
     }
 }
+
+.animation-two {
+    animation-name: animation2;
+    animation-duration: 10s;
+}
