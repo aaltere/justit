@@ -1,0 +1,18 @@
+* {
+    font-size: 36px;
+}
+
+@keyframes animation1 {
+    from {
+        background-color: brown;
+    }
+    to {
+        background-color: blue;
+    }
+}
+
+.animation-one {
+    animation-name: animation1;
+    animation-duration: 2s;
+    /* animation-fill-mode: backwards; */
+}
