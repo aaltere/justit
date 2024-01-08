@@ -45,3 +45,30 @@
     animation-delay: 3s;
     animation-iteration-count: infinite;
 }
+
+/* Animatin Three */
+
+@keyframes animation3 {
+    from {
+        left: -30%;
+    }
+    to {
+        left: 100%;
+    }
+}
+
+.animation-three {
+    position: absolute;
+
+    width: 100px;
+    height: 100px;
+    background-color: crimson;
+    border-radius: 50%;
+    margin-top: 50px;
+
+    animation-name: animation3;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+    animation-direction: reverse;
+}
