@@ -18,3 +18,17 @@
     height: 300px;
     background-color: crimson;
 }
+
+button {
+    padding: 15px 30px;
+    font-size: 20px;
+    margin: 10px auto;
+    background-color: brown;
+
+    transition: background-color 2s, padding 3s;
+}
+
+button:hover {
+    background-color: blueviolet;
+    padding: 15px 60px;
+}
