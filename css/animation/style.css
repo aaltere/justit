@@ -16,3 +16,25 @@
     animation-duration: 2s;
     /* animation-fill-mode: backwards; */
 }
+
+@keyframes animation2 {
+    0% {
+        background-color: brown;
+    }
+
+    25% {
+        background-color: chartreuse;
+    }
+
+    50% {
+        background-color: darkmagenta;
+    }
+
+    75% {
+        background-color: darkgreen;
+    }
+
+    100% {
+        background-color: yellow;
+    }
+}
