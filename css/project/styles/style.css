@@ -1,3 +1,48 @@
+/* 
+ * Universal declarions
+ */
+
+ html {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
 *, *::before, *::after {
     box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+/*
+ * Header declarations
+ */
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #1d1e2c;
+
+    height: 7.5vh;
+}
+
+header a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: #e6e6e6;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    list-style-type: none;
 }
