@@ -88,4 +88,12 @@ main {
 
 #hero h1 {
     font-size: 120px;
+    margin: 0.1em;
+    color: #f9faf8;
+}
+
+#hero p {
+    font-size: 24px;
+    font-weight: 700;
+    color: #e5e7eb;
 }
