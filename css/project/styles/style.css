@@ -18,7 +18,7 @@ body {
 
 .inner {
     display: flex;
-    flex: 0 1 1200px;
+    flex: 0 1 1000px;
 }
 
 /*
@@ -96,4 +96,22 @@ main {
     font-size: 24px;
     font-weight: 700;
     color: #e5e7eb;
+}
+
+/* 
+ * About declarations
+ */
+
+#about {
+    min-width: 100vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(29,29,29);
+}
+
+#about .inner {
+    flex-direction: column;
 }
