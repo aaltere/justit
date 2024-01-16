@@ -1,5 +1,5 @@
 let num1 = 100; // Number
-let firstName = "Zak"; // String
+let firstName = "Pete"; // String
 
 console.log(typeof num1);
 console.log(typeof firstName);
