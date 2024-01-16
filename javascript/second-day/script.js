@@ -43,3 +43,19 @@ console.log(Number(myName));
 
 console.log(Number(false));
 console.log(Number(true));
+
+console.clear();
+
+console.log(Boolean(0));
+console.log(Boolean(1));
+console.log(Boolean("JavaScript"));
+console.log(Boolean(""));
+console.log(Boolean(" "));
+
+let firstMessage = "Welcome to JavaScript";
+let secondMessage = 'Welcome to JavaScript';
+let thirdMessage = `Welcome to JavaScript`;
+
+let lastName = "Ashworth";
+
+console.log(`${firstName} ${lastName}`);
