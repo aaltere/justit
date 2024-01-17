@@ -1,6 +1,6 @@
-let num = 18;
+let num = 15;
 
-if (typeof num !== "number")
+if (isNaN(num))
 {
     console.log("Not a valid number");
 }
