@@ -49,3 +49,29 @@ else
 {
     console.log("Invalid age");
 }
+
+let day = "Monday";
+
+switch (day)
+{
+    case "Monday":
+        console.log("Happy Monday");
+        break;
+    case "Tuesday":
+        console.log("Second day of the week");
+        break;
+    case "Wednesday":
+        console.log("Midway through the week!");
+        break;
+    case "Thursday":
+        console.log("It's almost Friday");
+        break;
+    case "Friday":
+        console.log("Happy Friday!");
+        break;
+    case "Saturday":
+    case "Sunday":
+        console.log("It's the weekend!");
+    default:
+        console.log("Invalid day, try again")
+}
