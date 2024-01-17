@@ -2,7 +2,7 @@ let num = 15;
 
 if (num % 2 === 0)
 {
-    console.log("The nubmber is even");
+    console.log("The number is even");
 }
 else 
 {
