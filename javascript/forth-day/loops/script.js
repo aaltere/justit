@@ -20,3 +20,22 @@ for (let i = 0; i < colours.length; i++)
 {
     console.log(colours[i]);
 }
+
+// While loop
+let i = 0;
+
+while (i < 20)
+{
+    console.log(i);
+
+    i++;
+}
+
+// Do While loop
+let j = 1;
+
+do
+{
+    console.log(num);
+} 
+while (num > 5);
