@@ -26,13 +26,13 @@ console.log(employees);
 
 // Remove last item
 let test = employees.pop();
-console.log(employees)
+console.log(employees);
 
 let fruits = [
     "Banana",
     "Apple",
     "Kiwi"
-]
+];
 
 // Start at index 1, remove 2 items and then add Orange
 fruits.splice(1, 2, "Orange");
