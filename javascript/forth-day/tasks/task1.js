@@ -6,6 +6,8 @@ const shows = [
     "South park"
 ];
 
+shows.push("The Simpsons", "A Silent Voice");
+
 for (const show in shows)
 {
     console.log(shows[show]);
