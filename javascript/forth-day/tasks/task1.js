@@ -8,7 +8,7 @@ const shows = [
 
 shows.push("The Simpsons", "A Silent Voice");
 
-for (const show in shows)
+for (const show of shows)
 {
-    console.log(shows[show]);
+    console.log(show);
 }
