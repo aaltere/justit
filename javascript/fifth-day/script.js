@@ -57,3 +57,23 @@ console.log(sum(50, 50));
 // Block scope - let, const
 // Local scope - let, const, var
 // Global scope - declaring outside a function
+
+// Function that calls another function
+function double(num)
+{
+    return num * 2;
+}
+
+function quadruple(num)
+{
+    return double(num) * 2;
+}
+
+console.log(quadruple(20));
+
+// Arrow function
+let times2 = num => num * 2;
+console.log(times2(10));
+
+let multiply = (x, y) => x * y;
+console.log(multiply(7, 7));
