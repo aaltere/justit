@@ -52,3 +52,8 @@ console.log(sum(50, 50));
 // {
 //     alert(`Hello, ${userName}, how are you?`);
 // }
+
+// Scope in JS
+// Block scope - let, const
+// Local scope - let, const, var
+// Global scope - declaring outside a function
