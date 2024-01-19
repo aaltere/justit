@@ -42,4 +42,13 @@ function sum(num1, num2)
 console.log(sum(20, 10));
 console.log(sum(50, 50));
 
-//Scope in JavaScript
+// Create a function which will hello 'PersonName' that you pass as argument.
+
+// let userName = prompt("What is your name");
+
+// greet(userName);
+
+// function greet(userName)
+// {
+//     alert(`Hello, ${userName}, how are you?`);
+// }
