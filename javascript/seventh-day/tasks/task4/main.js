@@ -1,10 +1,14 @@
-const input = document.querySelector("input");
+const inputs = document.querySelectorAll("input");
 
-input.addEventListener("keypress", () =>
+for (const input of inputs)
 {
-    input.style.backgroundColor = randomColor();
-    input.style.color = randomColor();
-});
+    input.addEventListener("keypress", () =>
+    {
+        input.style.backgroundColor = randomColor();
+        input.style.color = randomColor();
+    });
+}
+
 
 function randomColor()
 {
