@@ -14,12 +14,28 @@
             }
 
             button {
+                display: block;
+                margin: auto;
+                width: 10rem;
+                height: 2rem;
                 margin-top: 2vh;
+            }
+
+            :modal {
+                background-color: beige;
+                border: 2px solid burlywood;
+                border-radius: 5px;
             }
         </style>
     </head>
     <body>
-        <button>Subscribe</button>
+        <button id="subscribe">Subscribe</button>
+        <dialog id="test">
+            <form method="dialog">
+                <p>Please Subscribe</p>
+                <button>SUBSCRIBE</button>
+            </form>
+        </dialog>
         <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
             Provident repudiandae sapiente velit vero quis tempora debitis repellendus, 
