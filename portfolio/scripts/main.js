@@ -40,8 +40,15 @@ for (let i = 0; i < yBlock; i++)
 
 loop();
 
+function gameLoop()
+{
+    drawGame(gameArea);
+
+    requestAnimationFrame(gameLoop);
+}
+
 // Function for drawing the game
-function drawGame()
+function drawGame(gameArea)
 {
     // Loop through array to see if it holds part of a piece
     for (let i = 0; i < yBlock; i++)
@@ -87,11 +94,4 @@ function drawGame()
 function randomPiece()
 {
     return Math.floor(Math.random() * 7);
-}
-
-function gameLoop()
-{
-    drawGame();
-
-    requestAnimationFrame(gameLoop);
 }
