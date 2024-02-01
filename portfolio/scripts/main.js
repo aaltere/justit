@@ -15,3 +15,17 @@ const gameWindowYStart = (windowHeight / 2) - (gameHeight / 2);
 
 ctx.strokeStyle = "cyan";
 ctx.strokeRect(gameWindowXStart, gameWindowYStart, gameWidth, gameHeight);
+
+let gameArea = [];
+
+for (let i = 0; i < 20; i++)
+{
+    gameArea[i] = new Array(10);
+
+    for (let j = 0; j < 10; j++)
+    {
+        gameArea[i][j] = "O";
+    }
+}
+
+console.log(gameArea);
