@@ -111,7 +111,7 @@ function updateBoard(gameArea, blockLocation, blockType)
 {
     for (let i = 0; i < 4; i++)
     {
-        gameArea[blockLocation[i][0], blockLocation[i][1]] = blockType;
+        gameArea[blockLocation[i][0]][blockLocation[i][1]] = blockType;
     }
 }
 
