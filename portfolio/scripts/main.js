@@ -38,13 +38,68 @@ for (let i = 0; i < yBlock; i++)
     }
 }
 
+// Call animation loop function
 gameLoop();
 
+// Function for updating game's frames
 function gameLoop()
 {
     drawGame(gameArea);
 
     requestAnimationFrame(gameLoop);
+}
+
+// Function for assinging piece positions
+function spawnBlock()
+{
+    let blockLocation = new Array(4);
+    let piece = randomPiece();
+
+    switch(piece)
+    {
+        case 0:
+            blockLocation[0] = [0, 3];
+            blockLocation[1] = [0, 4];
+            blockLocation[2] = [0, 5];
+            blockLocation[3] = [0, 6];
+            break;
+        case 1:
+            blockLocation[0] = [0, 4];
+            blockLocation[1] = [0, 5];
+            blockLocation[2] = [1, 4];
+            blockLocation[3] = [1, 5];
+            break;
+        case 2:
+            blockLocation[0] = [0, 4];
+            blockLocation[1] = [1, 3];
+            blockLocation[2] = [1, 4];
+            blockLocation[3] = [1, 5];
+            break;
+        case 3:
+            blockLocation[0] = [0, 3];
+            blockLocation[1] = [1, 3];
+            blockLocation[2] = [1, 4];
+            blockLocation[3] = [1, 5];
+            break;
+        case 4:
+            blockLocation[0] = [0, 5];
+            blockLocation[1] = [1, 3];
+            blockLocation[2] = [1, 4];
+            blockLocation[3] = [1, 5];
+            break;
+        case 5:
+            blockLocation[0] = [0, 4];
+            blockLocation[1] = [0, 5];
+            blockLocation[2] = [1, 3];
+            blockLocation[3] = [1, 4];
+            break;
+        case 6:
+            blockLocation[0] = [0, 3];
+            blockLocation[1] = [0, 4];
+            blockLocation[2] = [1, 4];
+            blockLocation[3] = [1, 5];
+            break;
+    }
 }
 
 // Function for drawing the game
@@ -91,6 +146,7 @@ function drawGame(gameArea)
     }
 }
 
+// Ruturn a random tetrimino piece
 function randomPiece()
 {
     return Math.floor(Math.random() * 7);
