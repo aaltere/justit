@@ -42,6 +42,9 @@ for (let i = 0; i < yBlock; i++)
     }
 }
 
+spawnBlock(blockLocation, blockType);
+updateBoard(gameArea, blockLocation, blockType);
+
 // Call animation loop function
 gameLoop();
 
@@ -54,49 +57,47 @@ function gameLoop()
 }
 
 // Function for assinging piece positions
-function spawnBlock(blockLocation)
+function spawnBlock(blockLocation, blockType)
 {
-    let piece = randomPiece();
-
-    switch(piece)
+    switch(blockType)
     {
-        case 0:
+        case "I":
             blockLocation[0] = [0, 3];
             blockLocation[1] = [0, 4];
             blockLocation[2] = [0, 5];
             blockLocation[3] = [0, 6];
             break;
-        case 1:
+        case "O":
             blockLocation[0] = [0, 4];
             blockLocation[1] = [0, 5];
             blockLocation[2] = [1, 4];
             blockLocation[3] = [1, 5];
             break;
-        case 2:
+        case "T":
             blockLocation[0] = [0, 4];
             blockLocation[1] = [1, 3];
             blockLocation[2] = [1, 4];
             blockLocation[3] = [1, 5];
             break;
-        case 3:
+        case "J":
             blockLocation[0] = [0, 3];
             blockLocation[1] = [1, 3];
             blockLocation[2] = [1, 4];
             blockLocation[3] = [1, 5];
             break;
-        case 4:
+        case "L":
             blockLocation[0] = [0, 5];
             blockLocation[1] = [1, 3];
             blockLocation[2] = [1, 4];
             blockLocation[3] = [1, 5];
             break;
-        case 5:
+        case "S":
             blockLocation[0] = [0, 4];
             blockLocation[1] = [0, 5];
             blockLocation[2] = [1, 3];
             blockLocation[3] = [1, 4];
             break;
-        case 6:
+        case "Z":
             blockLocation[0] = [0, 3];
             blockLocation[1] = [0, 4];
             blockLocation[2] = [1, 4];
