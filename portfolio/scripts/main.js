@@ -21,6 +21,9 @@ const xBlock = 10;
 const gameWindowXStart = (windowWidth / 2) - (gameWidth / 2);
 const gameWindowYStart = (windowHeight / 2) - (gameHeight / 2);
 
+// Location of player control piece
+let blockLocation = new Array(4);
+
 // Draw game border
 ctx.strokeStyle = "cyan";
 ctx.strokeRect(gameWindowXStart, gameWindowYStart, gameWidth, gameHeight);
@@ -50,9 +53,8 @@ function gameLoop()
 }
 
 // Function for assinging piece positions
-function spawnBlock()
+function spawnBlock(blockLocation)
 {
-    let blockLocation = new Array(4);
     let piece = randomPiece();
 
     switch(piece)
@@ -100,9 +102,10 @@ function spawnBlock()
             blockLocation[3] = [1, 5];
             break;
     }
-
-    return blockLocation;
 }
+
+// Function for updating the board array
+
 
 // Function for drawing the game
 function drawGame(gameArea)
