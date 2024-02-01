@@ -7,6 +7,11 @@ const windowHeight = (canvas.height = window.innerHeight);
 ctx.fillStyle = "black";
 ctx.fillRect(0, 0, windowWidth, windowHeight);
 
-ctx.strokeStyle = "cyan";
-ctx.strokeRect((windowWidth / 2) - 125, (windowHeight / 2) - 250, 250, 500);
+const gameWidth = 250;
+const gameHeight = 500;
 
+const gameWindowXStart = (windowWidth / 2) - (gameWidth / 2);
+const gameWindowYStart = (windowHeight / 2) - (gameHeight / 2);
+
+ctx.strokeStyle = "cyan";
+ctx.strokeRect(gameWindowXStart, gameWindowYStart, gameWidth, gameHeight);
