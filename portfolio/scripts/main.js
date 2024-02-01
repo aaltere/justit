@@ -28,7 +28,7 @@ let blockLocation = new Array(4);
 ctx.strokeStyle = "cyan";
 ctx.strokeRect(gameWindowXStart, gameWindowYStart, gameWidth, gameHeight);
 
-// Create array for game area and assign O to all
+// Create array for game area and assign - to all
 let gameArea = [];
 
 for (let i = 0; i < yBlock; i++)
