@@ -25,6 +25,7 @@ const gameWindowYStart = (windowHeight / 2) - (gameHeight / 2);
 ctx.strokeStyle = "cyan";
 ctx.strokeRect(gameWindowXStart, gameWindowYStart, gameWidth, gameHeight);
 
+// Create array for game area and assign O to all
 let gameArea = [];
 
 for (let i = 0; i < yBlock; i++)
@@ -36,3 +37,5 @@ for (let i = 0; i < yBlock; i++)
         gameArea[i][j] = "O";
     }
 }
+
+// Function for drawing the game
