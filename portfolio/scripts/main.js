@@ -84,9 +84,14 @@ function drawGame()
     }
 }
 
-function loop()
+function randomPiece()
+{
+    return Math.floor(Math.random() * 7);
+}
+
+function gameLoop()
 {
     drawGame();
 
-    requestAnimationFrame(loop);
+    requestAnimationFrame(gameLoop);
 }
