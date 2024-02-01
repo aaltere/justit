@@ -38,6 +38,8 @@ for (let i = 0; i < yBlock; i++)
     }
 }
 
+loop();
+
 // Function for drawing the game
 function drawGame()
 {
@@ -80,4 +82,11 @@ function drawGame()
             }
         }
     }
+}
+
+function loop()
+{
+    drawGame();
+
+    requestAnimationFrame(loop);
 }
