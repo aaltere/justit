@@ -76,7 +76,7 @@ function drawGame()
                 }
 
                 // Fill in the corresponding square
-                ctx.fillRect(gameWindowXStart + (25 * y), gameWindowYStart + (25 * i), 25, 25);
+                ctx.fillRect(gameWindowXStart + (25 * j), gameWindowYStart + (25 * i), 25, 25);
             }
         }
     }
