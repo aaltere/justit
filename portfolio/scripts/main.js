@@ -21,8 +21,9 @@ const xBlock = 10;
 const gameWindowXStart = (windowWidth / 2) - (gameWidth / 2);
 const gameWindowYStart = (windowHeight / 2) - (gameHeight / 2);
 
-// Location of player control piece
+// Location and type of player control piece
 let blockLocation = new Array(4);
+let blockType = randomPiece();
 
 // Draw game border
 ctx.strokeStyle = "cyan";
@@ -105,7 +106,13 @@ function spawnBlock(blockLocation)
 }
 
 // Function for updating the board array
-
+function updateBoard(gameArea, blockLocation, blockType)
+{
+    for (let i = 0; i < 4; i++)
+    {
+        gameArea[blockLocation[i][0], blockLocation[i][1]] = blockType;
+    }
+}
 
 // Function for drawing the game
 function drawGame(gameArea)
@@ -154,5 +161,32 @@ function drawGame(gameArea)
 // Ruturn a random tetrimino piece
 function randomPiece()
 {
-    return Math.floor(Math.random() * 7);
+    let blockType;
+
+    switch(Math.floor(Math.random() * 7))
+    {
+        case 0:
+            blockType = "I";
+            break;
+        case 1:
+            blockType = "O";
+            break;
+        case 2:
+            blockType = "T";
+            break;
+        case 3:
+            blockType = "J";
+            break;
+        case 4:
+            blockType = "L";
+            break;
+        case 5:
+            blockType = "S";
+            break;
+        case 6:
+            blockType = "Z";
+            break;
+    }
+
+    return blockType;
 }
