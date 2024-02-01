@@ -34,11 +34,11 @@ for (let i = 0; i < yBlock; i++)
 
     for (let j = 0; j < xBlock; j++)
     {
-        gameArea[i][j] = "O";
+        gameArea[i][j] = "-";
     }
 }
 
-loop();
+gameLoop();
 
 function gameLoop()
 {
@@ -56,7 +56,7 @@ function drawGame(gameArea)
         for (let j = 0; j < xBlock; j++)
         {
             // Check if part of a piece is being held
-            if (gameArea[i][j] !== "O")
+            if (gameArea[i][j] !== "-")
             {
                 // Change colour depending on which piece
                 switch (gameArea[i][j])
