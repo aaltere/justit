@@ -100,6 +100,8 @@ function spawnBlock()
             blockLocation[3] = [1, 5];
             break;
     }
+
+    return blockLocation;
 }
 
 // Function for drawing the game
