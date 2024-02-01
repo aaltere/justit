@@ -39,3 +39,45 @@ for (let i = 0; i < yBlock; i++)
 }
 
 // Function for drawing the game
+function drawGame()
+{
+    // Loop through array to see if it holds part of a piece
+    for (let i = 0; i < yBlock; i++)
+    {
+        for (let j = 0; j < xBlock; j++)
+        {
+            // Check if part of a piece is being held
+            if (gameArea[i][j] !== "O")
+            {
+                // Change colour depending on which piece
+                switch (gameArea[i][j])
+                {
+                    case "I":
+                        ctx.fillStyle = "cyan";
+                        break;
+                    case "O":
+                        ctx.fillStyle = "yellow";
+                        break;
+                    case "T":
+                        ctx.fillStyle = "magenta";
+                        break;
+                    case "J":
+                        ctx.fillStyle = "blue";
+                        break;
+                    case "L":
+                        ctx.fillStyle = "orange";
+                        break;
+                    case "S":
+                        ctx.fillStyle = "green";
+                        break;
+                    case "Z":
+                        ctx.fillStyle = "red";
+                        break;
+                }
+
+                // Fill in the corresponding square
+                ctx.fillRect(gameWindowXStart + (25 * y), gameWindowYStart + (25 * i), 25, 25);
+            }
+        }
+    }
+}
