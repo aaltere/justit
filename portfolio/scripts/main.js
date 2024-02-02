@@ -42,8 +42,8 @@ for (let i = 0; i < yBlock; i++)
     }
 }
 
-spawnBlock(blockLocation, blockType);
-updateBoard(gameArea, blockLocation, blockType);
+spawnBlock(gameArea, blockLocation, blockType);
+updatePiece(gameArea, blockLocation, blockType);
 
 // Call animation loop function
 gameLoop();
@@ -57,7 +57,7 @@ function gameLoop()
 }
 
 // Function for assinging piece positions
-function spawnBlock(blockLocation, blockType)
+function spawnBlock(gameArea, blockLocation, blockType)
 {
     switch(blockType)
     {
@@ -104,15 +104,41 @@ function spawnBlock(blockLocation, blockType)
             blockLocation[3] = [1, 5];
             break;
     }
-}
 
-// Function for updating the board array
-function updateBoard(gameArea, blockLocation, blockType)
-{
+    // Add piece to game board
     for (let i = 0; i < 4; i++)
     {
         gameArea[blockLocation[i][0]][blockLocation[i][1]] = blockType;
     }
+}
+
+// Function to drop the piece as time goes
+function updatePiece(gameArea, blockLocation, blockType)
+{
+    // Set timer for every 1 second
+    const pieceDrop = setInterval(() =>
+    {
+        // Clear old position on the board and gives new cordinates
+        for (let i = 0; i < 4; i++)
+        {
+            gameArea[blockLocation[i][0]][blockLocation[i][1]] = "-";
+            blockLocation[i][0]++;
+        }
+
+        // Assign new cordinates to game board
+        for (let i = 0; i < 4; i++)
+        {
+            gameArea[blockLocation[i][0]][blockLocation[i][1]] = blockType;
+        }
+
+        window.addEventListener("keypress", e =>
+        {
+            if (e.key === "k")
+            {
+                clearInterval(pieceDrop);
+            }
+        });
+    }, 1000);
 }
 
 // Function for drawing the game
@@ -123,38 +149,37 @@ function drawGame(gameArea)
     {
         for (let j = 0; j < xBlock; j++)
         {
-            // Check if part of a piece is being held
-            if (gameArea[i][j] !== "-")
+            // Change colour depending on which piece
+            switch (gameArea[i][j])
             {
-                // Change colour depending on which piece
-                switch (gameArea[i][j])
-                {
-                    case "I":
-                        ctx.fillStyle = "cyan";
-                        break;
-                    case "O":
-                        ctx.fillStyle = "yellow";
-                        break;
-                    case "T":
-                        ctx.fillStyle = "magenta";
-                        break;
-                    case "J":
-                        ctx.fillStyle = "blue";
-                        break;
-                    case "L":
-                        ctx.fillStyle = "orange";
-                        break;
-                    case "S":
-                        ctx.fillStyle = "green";
-                        break;
-                    case "Z":
-                        ctx.fillStyle = "red";
-                        break;
-                }
-
-                // Fill in the corresponding square
-                ctx.fillRect(gameWindowXStart + (25 * j), gameWindowYStart + (25 * i), 25, 25);
+                case "I":
+                    ctx.fillStyle = "cyan";
+                    break;
+                case "O":
+                    ctx.fillStyle = "yellow";
+                    break;
+                case "T":
+                    ctx.fillStyle = "magenta";
+                    break;
+                case "J":
+                    ctx.fillStyle = "blue";
+                    break;
+                case "L":
+                    ctx.fillStyle = "orange";
+                    break;
+                case "S":
+                    ctx.fillStyle = "green";
+                    break;
+                case "Z":
+                    ctx.fillStyle = "red";
+                    break;
+                case "-":
+                    ctx.fillStyle = "black";
+                    break;
             }
+
+            // Fill in the corresponding square
+            ctx.fillRect(gameWindowXStart + (25 * j), gameWindowYStart + (25 * i), 25, 25);
         }
     }
 }
