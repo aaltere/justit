@@ -43,7 +43,7 @@ for (let i = 0; i < yBlock; i++)
 }
 
 spawnBlock(gameArea, blockLocation, blockType);
-updatePiece(gameArea, blockLocation, blockType);
+dropPiece(gameArea, blockLocation, blockType);
 
 // Listens to player input and check if they are the arrow keys left / right
 // If yes move the piece left / right accordingly
@@ -152,7 +152,7 @@ function spawnBlock(gameArea, blockLocation, blockType)
 }
 
 // Function to drop the piece as time goes
-function updatePiece(gameArea, blockLocation, blockType)
+function dropPiece(gameArea, blockLocation, blockType)
 {
     // Set timer for every 1 second
     const pieceDrop = setInterval(() =>
