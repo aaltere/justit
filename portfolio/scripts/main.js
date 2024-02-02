@@ -79,8 +79,6 @@ window.addEventListener("keydown", e =>
                 gameArea[blockLocation[i][0]][blockLocation[i][1]] = blockType;
             }
             break;
-        case "ArrowUp":
-                
     }
 });
 
