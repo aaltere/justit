@@ -45,6 +45,45 @@ for (let i = 0; i < yBlock; i++)
 spawnBlock(gameArea, blockLocation, blockType);
 updatePiece(gameArea, blockLocation, blockType);
 
+// Listens to player input and check if they are the arrow keys left / right
+// If yes move the piece left / right accordingly
+window.addEventListener("keydown", e =>
+{
+    switch (e.key)
+    {
+        case "ArrowLeft":
+            // Remove old position and move cordinates left
+            for (let i = 0; i < 4; i++)
+            {
+                gameArea[blockLocation[i][0]][blockLocation[i][1]] = "-";
+                blockLocation[i][1]--;
+            }
+
+            // Assign new cordinates to game board
+            for (let i = 0; i < 4; i++)
+            {
+                gameArea[blockLocation[i][0]][blockLocation[i][1]] = blockType;
+            }
+            break;
+        case "ArrowRight":
+            // Remove old position and move cordinates right
+            for (let i = 0; i < 4; i++)
+            {
+                gameArea[blockLocation[i][0]][blockLocation[i][1]] = "-";
+                blockLocation[i][1]++;
+            }
+
+            // Assign new cordinates to game board
+            for (let i = 0; i < 4; i++)
+            {
+                gameArea[blockLocation[i][0]][blockLocation[i][1]] = blockType;
+            }
+            break;
+        case "ArrowUp":
+                
+    }
+});
+
 // Call animation loop function
 gameLoop();
 
@@ -115,44 +154,6 @@ function spawnBlock(gameArea, blockLocation, blockType)
 // Function to drop the piece as time goes
 function updatePiece(gameArea, blockLocation, blockType)
 {
-    // Listens to player input and check if they are the arrow keys left / right
-    // If yes move the piece left / right accordingly
-    window.addEventListener("keydown", e =>
-    {
-        switch (e.key)
-        {
-            case "ArrowLeft":
-                // Remove old position and move cordinates left
-                for (let i = 0; i < 4; i++)
-                {
-                    gameArea[blockLocation[i][0]][blockLocation[i][1]] = "-";
-                    blockLocation[i][1]--;
-                }
-
-                // Assign new cordinates to game board
-                for (let i = 0; i < 4; i++)
-                {
-                    gameArea[blockLocation[i][0]][blockLocation[i][1]] = blockType;
-                }
-                break;
-            case "ArrowRight":
-                // Remove old position and move cordinates right
-                for (let i = 0; i < 4; i++)
-                {
-                    gameArea[blockLocation[i][0]][blockLocation[i][1]] = "-";
-                    blockLocation[i][1]++;
-                }
-
-                // Assign new cordinates to game board
-                for (let i = 0; i < 4; i++)
-                {
-                    gameArea[blockLocation[i][0]][blockLocation[i][1]] = blockType;
-                }
-                break
-            default:
-                return;
-        }
-    });
     // Set timer for every 1 second
     const pieceDrop = setInterval(() =>
     {
