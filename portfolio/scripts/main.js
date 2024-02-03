@@ -96,6 +96,7 @@ function gameLoop()
 // Function for assinging piece positions
 function spawnBlock(gameArea, blockLocation, blockType)
 {
+    // Set spawn cordinates
     switch(blockType)
     {
         case "I":
