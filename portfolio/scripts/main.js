@@ -106,30 +106,30 @@ function spinBlock(gameArea, blockLocation, blockType, blockState)
         {
             case 1:
                 blockLocation[0] = [blockLocation[2][0] - 1, blockLocation[2][1]];
-                blockLocation[1] = [blockLocation[2][0], blockLocation[2][1]];
-                blockLocation[2] = [blockLocation[2][0] + 1, blockLocation[2][1]];
-                blockLocation[3] = [blockLocation[2][0] + 2, blockLocation[2][1]];
+                blockLocation[1] = [blockLocation[0][0] + 1, blockLocation[0][1]];
+                blockLocation[2] = [blockLocation[0][0] + 2, blockLocation[0][1]];
+                blockLocation[3] = [blockLocation[0][0] + 3, blockLocation[0][1]];
                 state = 2;
                 break;
             case 2:
                 blockLocation[0] = [blockLocation[2][0], blockLocation[2][1] + 1];
-                blockLocation[1] = [blockLocation[2][0], blockLocation[2][1]];
-                blockLocation[2] = [blockLocation[2][0], blockLocation[2][1] - 1];
-                blockLocation[3] = [blockLocation[2][0], blockLocation[2][1] - 2];
+                blockLocation[1] = [blockLocation[0][0], blockLocation[0][1] - 1];
+                blockLocation[2] = [blockLocation[0][0], blockLocation[0][1] - 2];
+                blockLocation[3] = [blockLocation[0][0], blockLocation[0][1] - 3];
                 state = 3;
                 break;
             case 3:
                 blockLocation[0] = [blockLocation[2][0] + 1, blockLocation[2][1]];
-                blockLocation[1] = [blockLocation[2][0], blockLocation[2][1]];
-                blockLocation[2] = [blockLocation[2][0] - 1, blockLocation[2][1]];
-                blockLocation[3] = [blockLocation[2][0] - 2, blockLocation[2][1]];
+                blockLocation[1] = [blockLocation[0][0] - 1, blockLocation[0][1]];
+                blockLocation[2] = [blockLocation[0][0] - 2, blockLocation[0][1]];
+                blockLocation[3] = [blockLocation[0][0] - 3, blockLocation[0][1]];
                 state = 4;
                 break;
             case 4:
                 blockLocation[0] = [blockLocation[2][0], blockLocation[2][1] - 1];
-                blockLocation[1] = [blockLocation[2][0], blockLocation[2][1]];
-                blockLocation[2] = [blockLocation[2][0], blockLocation[2][1] + 1];
-                blockLocation[3] = [blockLocation[2][0], blockLocation[2][1] + 2];
+                blockLocation[1] = [blockLocation[0][0], blockLocation[0][1] + 1];
+                blockLocation[2] = [blockLocation[0][0], blockLocation[0][1] + 2];
+                blockLocation[3] = [blockLocation[0][0], blockLocation[0][1] + 3];
                 state = 1;
                 break;
         }
