@@ -42,7 +42,7 @@ for (let i = 0; i < yBlock; i++)
     }
 }
 
-spawnBlock(gameArea, blockLocation, blockType);
+let blockState = spawnBlock(gameArea, blockLocation, blockType);
 dropPiece(gameArea, blockLocation, blockType);
 
 // Listens to player input and check if they are the arrow keys left / right
@@ -79,6 +79,9 @@ window.addEventListener("keydown", e =>
                 gameArea[blockLocation[i][0]][blockLocation[i][1]] = blockType;
             }
             break;
+        case "ArrowUp":
+            blockState = spinBlock(gameArea, blockLocation, blockType, blockState);
+            break;
     }
 });
 
@@ -91,6 +94,48 @@ function gameLoop()
     drawGame(gameArea);
 
     requestAnimationFrame(gameLoop);
+}
+
+function spinBlock(gameArea, blockLocation, blockType, blockState)
+{
+    let state = blockState;
+
+    if (blockType === "I")
+    {
+        switch (state)
+        {
+            case 1:
+                blockLocation[0] = [blockLocation[2][0] - 1, blockLocation[2][1]];
+                blockLocation[1] = [blockLocation[2][0], blockLocation[2][1]];
+                blockLocation[2] = [blockLocation[2][0] + 1, blockLocation[2][1]];
+                blockLocation[3] = [blockLocation[2][0] + 2, blockLocation[2][1]];
+                state = 2;
+                break;
+            case 2:
+                blockLocation[0] = [blockLocation[2][0], blockLocation[2][1] + 1];
+                blockLocation[1] = [blockLocation[2][0], blockLocation[2][1]];
+                blockLocation[2] = [blockLocation[2][0], blockLocation[2][1] - 1];
+                blockLocation[3] = [blockLocation[2][0], blockLocation[2][1] - 2];
+                state = 3;
+                break;
+            case 3:
+                blockLocation[0] = [blockLocation[2][0] + 1, blockLocation[2][1]];
+                blockLocation[1] = [blockLocation[2][0], blockLocation[2][1]];
+                blockLocation[2] = [blockLocation[2][0] - 1, blockLocation[2][1]];
+                blockLocation[3] = [blockLocation[2][0] - 2, blockLocation[2][1]];
+                state = 4;
+                break;
+            case 4:
+                blockLocation[0] = [blockLocation[2][0], blockLocation[2][1] - 1];
+                blockLocation[1] = [blockLocation[2][0], blockLocation[2][1]];
+                blockLocation[2] = [blockLocation[2][0], blockLocation[2][1] + 1];
+                blockLocation[3] = [blockLocation[2][0], blockLocation[2][1] + 2];
+                state = 1;
+                break;
+        }
+    }
+
+    return state;
 }
 
 // Function for assinging piece positions
@@ -148,6 +193,8 @@ function spawnBlock(gameArea, blockLocation, blockType)
     {
         gameArea[blockLocation[i][0]][blockLocation[i][1]] = blockType;
     }
+
+    return 1;
 }
 
 // Function to drop the piece as time goes
