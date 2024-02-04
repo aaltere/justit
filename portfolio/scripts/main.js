@@ -263,6 +263,36 @@ function spinBlock(gameArea, blockLocation, blockType, blockState)
                 break;
         }
     }
+    else if (blockType === "Z")
+    {
+        switch (blockState)
+        {
+            case 1:
+                blockLocation[0] = [blockLocation[2][0] - 1, blockLocation[2][1] + 1];
+                blockLocation[1] = [blockLocation[2][0], blockLocation[2][1] + 1];
+                blockLocation[3] = [blockLocation[2][0] + 1, blockLocation[2][1]];
+                state = 2;
+                break;
+            case 2:
+                blockLocation[0] = [blockLocation[2][0] + 1, blockLocation[2][1] + 1];
+                blockLocation[1] = [blockLocation[2][0] + 1, blockLocation[2][1]];
+                blockLocation[3] = [blockLocation[2][0], blockLocation[2][1] - 1];
+                state = 3;
+                break;
+            case 3:
+                blockLocation[0] = [blockLocation[2][0] + 1, blockLocation[2][1] - 1];
+                blockLocation[1] = [blockLocation[2][0], blockLocation[2][1] - 1];
+                blockLocation[3] = [blockLocation[2][0] - 1, blockLocation[2][1]];
+                state = 4;
+                break;
+            case 4:
+                blockLocation[0] = [blockLocation[2][0] - 1, blockLocation[2][1] - 1];
+                blockLocation[1] = [blockLocation[2][0] - 1, blockLocation[2][1]];
+                blockLocation[3] = [blockLocation[2][0], blockLocation[2][1] + 1];
+                state = 1;
+                break;
+        }
+    }
     // Return the state so it can be used later
     return state;
 }
