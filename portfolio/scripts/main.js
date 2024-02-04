@@ -293,7 +293,7 @@ function spinBlock(gameArea, blockLocation, blockType, blockState)
                 break;
         }
     }
-
+    // Update board on spin
     for (let i = 0; i < 4; i++)
     {
         gameArea[blockLocation[i][0]][blockLocation[i][1]] = blockType;
