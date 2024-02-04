@@ -100,6 +100,11 @@ function spinBlock(gameArea, blockLocation, blockType, blockState)
 {
     let state = blockState;
 
+    for (let i = 0; i < 4; i++)
+    {
+        gameArea[blockLocation[i][0]][blockLocation[i][1]] = "-";
+    }
+
     if (blockType === "I")
     {
         switch (state)
