@@ -96,15 +96,19 @@ function gameLoop()
     requestAnimationFrame(gameLoop);
 }
 
+// Function for spinning the controlled block
 function spinBlock(gameArea, blockLocation, blockType, blockState)
 {
     let state = blockState;
 
+    // Remove old cordinates when function triggered
     for (let i = 0; i < 4; i++)
     {
         gameArea[blockLocation[i][0]][blockLocation[i][1]] = "-";
     }
 
+    // Check block, check state, then performs the spin
+    // After the new cordinates are given, change state to the next
     if (blockType === "I")
     {
         switch (state)
@@ -140,6 +144,7 @@ function spinBlock(gameArea, blockLocation, blockType, blockState)
         }
     }
 
+    // Return the state so it can be used later
     return state;
 }
 
@@ -199,6 +204,7 @@ function spawnBlock(gameArea, blockLocation, blockType)
         gameArea[blockLocation[i][0]][blockLocation[i][1]] = blockType;
     }
 
+    // Return the initial state for spinning block
     return 1;
 }
 
