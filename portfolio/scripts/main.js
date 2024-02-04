@@ -293,6 +293,11 @@ function spinBlock(gameArea, blockLocation, blockType, blockState)
                 break;
         }
     }
+
+    for (let i = 0; i < 4; i++)
+    {
+        gameArea[blockLocation[i][0]][blockLocation[i][1]] = blockType;
+    }
     // Return the state so it can be used later
     return state;
 }
