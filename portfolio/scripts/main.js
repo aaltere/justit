@@ -49,6 +49,7 @@ dropPiece(gameArea, blockLocation, blockType);
 // If yes move the piece left / right accordingly
 window.addEventListener("keydown", e =>
 {
+    // Check which key is pressed
     switch (e.key)
     {
         case "ArrowLeft":
@@ -70,6 +71,40 @@ window.addEventListener("keydown", e =>
         case "ArrowUp":
             blockState = spinBlock(gameArea, blockLocation, blockType, blockState);
             break;
+    }
+
+    // Get most left and most right cordinates of the block
+    let minX = blockLocation[0][1];
+    let maxX = blockLocation[0][1];
+
+    for (let i = 1; i < 4; i++)
+    {
+        if (blockLocation[i][1] > maxX)
+        {
+            maxX = blockLocation[i][1];
+        }
+        else if (blockLocation[i][1] < minX)
+        {
+            minX = blockLocation[i][1];
+        }
+    }
+
+    // If block leaves the left boundary then push it black in to the right
+    if (minX < 0)
+    {
+        for (let i = 0; i < 4; i++)
+        {
+            blockLocation[i][1] -= minX;
+        }
+    }
+
+    // If block leaves the right boundary then push it black in to the left
+    if (maxX > xBlock - 1)
+    {
+        for (let i = 0; i < 4; i++)
+        {
+            blockLocation[i][1] -= (maxX - (xBlock - 1));
+        }
     }
 
     // Assign new cordinates to game board
