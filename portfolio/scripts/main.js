@@ -58,12 +58,6 @@ window.addEventListener("keydown", e =>
                 gameArea[blockLocation[i][0]][blockLocation[i][1]] = "-";
                 blockLocation[i][1]--;
             }
-
-            // Assign new cordinates to game board
-            for (let i = 0; i < 4; i++)
-            {
-                gameArea[blockLocation[i][0]][blockLocation[i][1]] = blockType;
-            }
             break;
         case "ArrowRight":
             // Remove old position and move cordinates right
@@ -72,16 +66,16 @@ window.addEventListener("keydown", e =>
                 gameArea[blockLocation[i][0]][blockLocation[i][1]] = "-";
                 blockLocation[i][1]++;
             }
-
-            // Assign new cordinates to game board
-            for (let i = 0; i < 4; i++)
-            {
-                gameArea[blockLocation[i][0]][blockLocation[i][1]] = blockType;
-            }
             break;
         case "ArrowUp":
             blockState = spinBlock(gameArea, blockLocation, blockType, blockState);
             break;
+    }
+
+    // Assign new cordinates to game board
+    for (let i = 0; i < 4; i++)
+    {
+        gameArea[blockLocation[i][0]][blockLocation[i][1]] = blockType;
     }
 });
 
@@ -292,11 +286,6 @@ function spinBlock(gameArea, blockLocation, blockType, blockState)
                 state = 1;
                 break;
         }
-    }
-    // Update board on spin
-    for (let i = 0; i < 4; i++)
-    {
-        gameArea[blockLocation[i][0]][blockLocation[i][1]] = blockType;
     }
     // Return the state so it can be used later
     return state;
