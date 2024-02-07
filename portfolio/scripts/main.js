@@ -405,6 +405,7 @@ function dropPiece(gameArea, blockLocation, blockType)
             gameArea[blockLocation[i][0]][blockLocation[i][1]] = blockType;
         }
 
+        // Detect the lowest point of the lbock
         let maxY = blockLocation[0][0];
 
         for (let i = 1; i < 4; i++)
@@ -415,6 +416,8 @@ function dropPiece(gameArea, blockLocation, blockType)
             }
         }
 
+        // Check if the lowest point is at the bottom of the board
+        // If so then stop moving the piece
         if (maxY >= yBlock - 1)
         {
             clearInterval(pieceDrop);
