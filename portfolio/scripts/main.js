@@ -405,13 +405,20 @@ function dropPiece(gameArea, blockLocation, blockType)
             gameArea[blockLocation[i][0]][blockLocation[i][1]] = blockType;
         }
 
-        window.addEventListener("keypress", e =>
+        let maxY = blockLocation[0][0];
+
+        for (let i = 1; i < 4; i++)
         {
-            if (e.key === "k")
+            if (maxY < blockLocation[i][0])
             {
-                clearInterval(pieceDrop);
+                maxY = blockLocation[i][0];
             }
-        });
+        }
+
+        if (maxY >= yBlock - 1)
+        {
+            clearInterval(pieceDrop);
+        }
     }, 1000);
 }
 
