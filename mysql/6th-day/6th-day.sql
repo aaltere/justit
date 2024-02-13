@@ -132,3 +132,33 @@ VALUES
 	(1, 'HR', 'London'),
     (2, 'Software', 'London'),
     (3, 'IT', 'Manchester');
+    
+SELECT
+	*
+FROM
+	employees;
+    
+SELECT
+	*
+FROM
+	departments;
+    
+-- display employees and their department name
+
+SELECT
+	employee_name,
+    department_name
+FROM
+	employees AS e
+		INNER JOIN
+	departments AS d ON d.department_number = e.department_number;
+    
+-- display all employees and their department
+
+SELECT
+	employee_name,
+    department_name
+FROM
+	employees AS e
+		LEFT JOIN
+	departments AS d ON d.department_number = e.department_number;
