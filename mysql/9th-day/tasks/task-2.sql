@@ -184,6 +184,34 @@ FROM
 
 -- task 4
 
+-- 4.1
+
+SELECT
+	vehicle_registration,
+    vehicle_make,
+    vehicle_model,
+    CONCAT(member_fname, ' ', member_lname) AS member_name
+FROM
+	vehicles AS v
+		INNER JOIN
+	members AS m ON m.member_id = v.member_id; 
+
+-- 4.2
+
+SELECT
+	member_fname,
+    member_lname,
+	COUNT(*) AS number_of_cars
+FROM
+	vehicles AS v
+		INNER JOIN
+	members AS m ON m.member_id = v.member_id
+GROUP BY
+	v.member_id
+ORDER BY
+	number_of_cars DESC;
+
+
 -- 4.3
 
 SELECT
@@ -199,4 +227,72 @@ FROM
 	members AS m ON v.member_id = m.member_id
 WHERE
 	breakdown_location = 'London';
+
+-- 4.4
+
+SELECT
+    breakdown_date,
+    breakdown_time,
+    breakdown_location,
+	CONCAT(member_fname, ' ', member_lname) AS member_name,
+    v.vehicle_registration,
+    vehicle_make,
+    vehicle_model,
+    CONCAT(engineer_fname, ' ', engineer_lname) AS engineer_responsible
+FROM
+	breakdowns AS b
+		INNER JOIN
+	vehicles AS v ON v.vehicle_registration = b.vehicle_registration
+		INNER JOIN
+	members AS m ON m.member_id = v.member_id
+		INNER JOIN
+	engineers AS e ON e.engineer_id = b.engineer_id
+WHERE
+	breakdown_date BETWEEN '2022-01-01' AND '2022-12-31';
+    
+-- 4.5
+
+-- task 5
+
+-- AVG()
+-- an aggregate function that calculates the average value of a set
+-- if set to DISTINCT will only calculate the avereage of unique values
+-- to use - AVG([ALL | DISTINCT] expression)
+-- is ALL by default
+
+SELECT 
+	AVG(salary)
+FROM
+	employees;
+    
+-- MAX()
+--  an aggregate function that finds the maximum value in a set of values
+-- to use - MAX(expression)
+
+SELECT
+	MAX(salary)
+FROM
+	employees;
+
+-- MIN()
+--  an aggregate function that finds the minimum value in a set of values
+-- to use - MIN(expression)
+
+SELECT
+	MIN(salary)
+FROM
+	employees;
+
+-- SUM()
+-- an aggregate function that calculates thesum of value in a set
+-- if set to DISTINCT will only calculate the sum of unique values
+-- to use - SUM([ALL | DISTINCT] expression)
+-- is ALL by default
+
+SELECT 
+	SUM(salary)
+FROM
+	employees;
+    
+-- task 6
 
