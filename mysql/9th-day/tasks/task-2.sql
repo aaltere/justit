@@ -252,6 +252,46 @@ WHERE
     
 -- 4.5
 
+-- query for showing which engineer is responsible for which member
+
+SELECT
+	CONCAT(engineer_fname, ' ', engineer_lname) AS engineer_name,
+    CONCAT(member_fname, ' ', member_lname) AS member_responsible
+FROM
+	engineers AS e
+		INNER JOIN
+	breakdowns AS b ON b.engineer_id = e.engineer_id
+		INNER JOIN
+	vehicles AS v ON b.vehicle_registration = v.vehicle_registration
+		INNER JOIN
+	members AS m ON m.member_id = v.member_id;
+    
+-- query for showing car makes each engineer works with
+    
+SELECT DISTINCT
+	CONCAT(engineer_fname, ' ', engineer_lname) AS engineer_name,
+    vehicle_make
+FROM
+	engineers AS e
+		INNER JOIN
+	breakdowns AS b ON b.engineer_id = e.engineer_id
+		INNER JOIN
+	vehicles AS v ON b.vehicle_registration = v.vehicle_registration;
+
+-- query for showing the number of cases each engineer is responsible for
+
+SELECT
+	CONCAT(engineer_fname, ' ', engineer_lname) AS engineer_name,
+    COUNT(*) AS number_of_cases_responsible
+FROM
+	engineers AS e
+		INNER JOIN
+	breakdowns AS b ON b.engineer_id = e.engineer_id
+		INNER JOIN
+	vehicles AS v ON b.vehicle_registration = v.vehicle_registration
+GROUP BY
+	e.engineer_id;
+
 -- task 5
 
 -- AVG()
@@ -296,3 +336,36 @@ FROM
     
 -- task 6
 
+-- 6.1
+
+SELECT
+	CONCAT(member_fname, ' ', member_lname) AS member_name,
+    COUNT(*) AS number_of_vehicles,
+    CASE
+		WHEN COUNT(*) > 1 THEN 'Multi-car policy'
+        ELSE 'Normal policy'
+	END AS policy
+FROM
+	members AS m
+		INNER JOIN
+	vehicles AS v ON v.member_id = m.member_id
+GROUP BY
+	v.member_id;
+
+-- 6.2
+
+DELIMITER $$
+
+CREATE PROCEDURE number_of_cars(IN first_name VARCHAR(25), IN last_name VARCHAR(25))
+BEGIN
+	SELECT
+		CONCAT(member_fname, ' ', member_lname) AS member_name,
+		COUNT(*) AS number_of_cars
+	FROM
+		members AS m
+			INNER JOIN
+		vehicles AS v ON v.member_id = m.member_id
+	WHERE
+		member_fname = first_name
+	AND member_lname = last_name;
+END $$
