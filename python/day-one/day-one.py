@@ -40,3 +40,30 @@ print(id(num3))
 print(id(num4))
 
 # variable stores data
+
+# type() function is used to get the data type of a variable like so
+
+print()
+
+num5 = 20.5
+print(type(num5))
+
+num6 = 10
+num7 = 6.5
+num8 = 10e6
+num9 = 2 + 3j
+num10 = 0b10
+
+print()
+
+print(num6, num7, num8, num9, num10)
+
+str1 = "Hello"
+str2 = 'how'
+str3 = "are"
+str4 = 'you'
+str5 = f"{str1}, {str2} {str3} {str4}?"
+
+print()
+
+print(str5)
