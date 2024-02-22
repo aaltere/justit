@@ -72,6 +72,28 @@ for column in range(size):
 
         win = True
 
+if not win:
+
+    counterDiagonalR = 0
+    counterDiagonalL = 0
+
+    initialL = game[0][0]
+    initialR = game[0][size - 1]
+
+    if initialR != 0:
+        counterDiagonalR += 1
+
+    if initialL != 0:
+        counterDiagonalL += 1
+
+    for row in range(1, size):
+
+        if game[row][row] == initialR:
+            counterDiagonalR += 1
+
+        if game[row][size - (row + 1)] == initialL:
+            counterDiagonalL += 1
+
 if win:
     print("Win")
 else:
