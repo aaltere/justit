@@ -7,7 +7,12 @@
 
 "Syntax :  varName = openMethod('pathtofolder/parthtofile//fileName.txt', 'w')"
 filePath1 = open("python/week-10/Pt7_FilesDictsCodeBase2024/your-name.txt", 'r') # folder/folder/filename
-print(filePath1.read())
+# method 1
+# print(filePath1.read())
+
+# method 2
+contents = filePath1.read()
+print(contents)
 filePath1.close()
 
 
