@@ -30,13 +30,17 @@ The text file must be saved in the same location as your Python file for the pro
 
 "1_FileHandling_ReadWrite/myfile.txt","w"
 "Syntax :  varName = openMethod('pathtofolder/parthtofile/fileName.txt', 'w')"
-filePath1 = open('python/week-10/Pt7_FilesDictsCodeBase2024/file1.txt', 'w') # folder/folder/filename
+# filePath1 = open('python/week-10/Pt7_FilesDictsCodeBase2024/file1.txt', 'w') # folder/folder/filename
 # write to file
 # content = "Today is Monday"
 # filePath1.write(content)
-filePath1.write("Python Programming")
+# filePath1.write("Python Programming")
 # close the filepath and file/ releasing the resource
-filePath1.close()
+# filePath1.close()
+
+filePath2 = open('python/week-10/Pt7_FilesDictsCodeBase2024/your-name.txt', 'w')
+filePath2.write("Peter Ashworth")
+filePath2.close()
 
 "To Do: Refer to the example code above to create a file called yourName.txt and Write your name to the file" 
 # If stuck refer to the example above
