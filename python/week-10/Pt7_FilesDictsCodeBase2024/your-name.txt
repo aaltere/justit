@@ -1,3 +1,5 @@
 Peter Ashworth
 Coding
 123 Real street, Real City, UK, RS00 0RC
+I am coding in Python
+I am writing and reading to files

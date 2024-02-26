@@ -9,11 +9,11 @@
 # r+ for reading and writing files
 
 
-with open('pathtofolder/parthtofile/fileName.txt',"r+") as filePath1:# folder/folder/filename
+with open("python/week-10/Pt7_FilesDictsCodeBase2024/your-name.txt","r+") as filePath1:# folder/folder/filename
     print(filePath1.read()) #read from fiile
     readContents = filePath1.read()
     print(readContents)
-    contents ="\nYourA\ntext\ngoes\nhere\nin\nnewlines"
+    contents ="\nI am coding in Python\nI am writing and reading to files"
     filePath1.write(contents) #write to file 
 
 
