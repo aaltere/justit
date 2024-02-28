@@ -418,7 +418,7 @@ function dropPiece(gameArea, blockLocation, blockType)
 
         // Check if the lowest point is at the bottom of the board
         // If so then stop moving the piece
-        if (maxY >= yBlock - 1)
+        if (maxY >= yBlock)
         {
             clearInterval(pieceDrop);
         }
