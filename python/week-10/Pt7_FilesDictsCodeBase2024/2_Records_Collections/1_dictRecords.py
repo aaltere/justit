@@ -38,7 +38,17 @@ print(dValues)
 "To Do: Task 1: Refer to the example code above to create your own dictionary with key value pairs and explain the differences between the items(), keys() and values() dictionary methods"
 
 # Loop through the keys ansd/values
+print("\nLoop through the keys and values\n")
+for key, value in dItems:
+    print(f"Key: {key}, Value: {value}\n")
 
+print("\nLoop through the keys\n")
+for key in dKeys:
+    print(f"Key: {key}")
+
+print("\nLoop through the values\n")
+for value in dValues:
+    print(f"Value: {value}")
 
 "To Do: Task 2: Modify"
 # Modify: The for loop block above to loop through your own the values 
