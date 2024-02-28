@@ -2,7 +2,7 @@ import logging
 
 "To Do: Predict, then Run, and then Investigate"
 #different logging methods and severity
-logging.basicConfig(filename=r"folderpath/filename", level=logging.DEBUG) 
+logging.basicConfig(filename=r"python\week-10\Pt8_ExceptionsCodeBase2024\1_Exceptions/file1.log", level=logging.DEBUG) 
 
 try:  # attempt to run the indented code block
     num1 = int(input(("Enter your first number: ")))
@@ -10,10 +10,15 @@ try:  # attempt to run the indented code block
     answer = num1 / num2
     #Output for developer/what the developer see
     logging.info(f"Divided {num1} / {num2} = {answer}")
+
+    #Output for user/what the user see
+    print(f"Dividing {num1} by {num2}: {answer}")
        
 except ZeroDivisionError:  # handles exception if code in try block fails
     #Output for user/what the user see
     print("You can't divide a number by zero")
+
+    #Output for developer/what the developer see
     logging.warning("User attempted to divide by zero")
    
 finally:
