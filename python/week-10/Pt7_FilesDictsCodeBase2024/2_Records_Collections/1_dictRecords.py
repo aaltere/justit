@@ -16,15 +16,24 @@ Attributes are sometimes referred to as fields.
 "To Do: Predict, then Run, and then Investigate"
 # create a dictionary 
 
+dict1 = {"fName": "Peter", "interest": "Programming", "age": 24, "gamer": True}
+print(dict1)
+print(dict1["fName"])
+print(dict1["gamer"])
 
 "Using dictionary methods"
 
 # D.items() -> a set-like object providing a view on D's items
+dItems = dict1.items()
+print(dItems)
 
 # D.keys() -> a set-like object providing a view on D's keys
+dKeys = dict1.keys()
+print(dKeys)
 
 # D.values() -> an object providing a view on D's values
-
+dValues = dict1.values()
+print(dValues)
 
 "To Do: Task 1: Refer to the example code above to create your own dictionary with key value pairs and explain the differences between the items(), keys() and values() dictionary methods"
 
@@ -41,35 +50,34 @@ Attributes are sometimes referred to as fields.
 dict2 = {2:"Python", 3:"HTML", 4:"CSS"}
 print(f"Dictionary 2 {dict2}")
 
-
 # Use of the Update method to merge two dictionaries
-?.update(dict2)
-print(f"Updated dictionary 1\n{dict1}")
+# ?.update(dict2)
+# print(f"Updated dictionary 1\n{dict1}")
 
-"To Do: Task 2: Research: Look up Pop vs popItem explaind comment the code below to explain the difference"
+# "To Do: Task 2: Research: Look up Pop vs popItem explaind comment the code below to explain the difference"
 
-# Add comment here to explain the function of th pop() method.
-dict2.pop(3)
-print(dict2)
+# # Add comment here to explain the function of th pop() method.
+# dict2.pop(3)
+# print(dict2)
 
-# Add comment here to explain the function of th popItem() method.
-?.popitem()
-print(dict1)
-
-
-"Delete key-value pair from dictionary:"
-# We can delete a key-value pair from a dictionary using the del keyword followed
-# by the key value to be deleted enclosed in [].
-
-del dict1[2]
+# # Add comment here to explain the function of th popItem() method.
+# ?.popitem()
+# print(dict1)
 
 
-# update dictionary value using the key
-dict1[1] = "Emma Smith"
-user={"interests" :"coding"}
+# "Delete key-value pair from dictionary:"
+# # We can delete a key-value pair from a dictionary using the del keyword followed
+# # by the key value to be deleted enclosed in [].
 
-print(user)
-user["interests"] = "Football"
+# del dict1[2]
 
-print(dict1)
-print(user)
+
+# # update dictionary value using the key
+# dict1[1] = "Emma Smith"
+# user={"interests" :"coding"}
+
+# print(user)
+# user["interests"] = "Football"
+
+# print(dict1)
+# print(user)
