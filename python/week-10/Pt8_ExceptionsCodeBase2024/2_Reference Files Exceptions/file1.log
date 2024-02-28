@@ -1,0 +1,4 @@
+INFO:root:On Wed Feb 28 09:45:11 2024
+Divided 123456 / 12 = 10288.0
+WARNING:root:On Wed Feb 28 09:45:21 2024
+User attempted to divide by zero
