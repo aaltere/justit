@@ -1,0 +1,2 @@
+INFO:root:Divided 123456 / 12 = 10288.0
+WARNING:root:User attempted to divide by zero
