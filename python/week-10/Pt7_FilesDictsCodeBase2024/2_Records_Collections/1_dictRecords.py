@@ -61,33 +61,34 @@ dict2 = {2:"Python", 3:"HTML", 4:"CSS"}
 print(f"Dictionary 2 {dict2}")
 
 # Use of the Update method to merge two dictionaries
-# ?.update(dict2)
-# print(f"Updated dictionary 1\n{dict1}")
+dict1.update(dict2)
+print(f"Updated dictionary 1\n{dict1}")
 
 # "To Do: Task 2: Research: Look up Pop vs popItem explaind comment the code below to explain the difference"
 
 # # Add comment here to explain the function of th pop() method.
-# dict2.pop(3)
-# print(dict2)
+dict2.pop(3)
+print(dict2)
 
 # # Add comment here to explain the function of th popItem() method.
-# ?.popitem()
-# print(dict1)
+dict1.popitem()
+print(dict1)
 
 
 # "Delete key-value pair from dictionary:"
 # # We can delete a key-value pair from a dictionary using the del keyword followed
 # # by the key value to be deleted enclosed in [].
 
-# del dict1[2]
+del dict1[2]
 
 
 # # update dictionary value using the key
-# dict1[1] = "Emma Smith"
-# user={"interests" :"coding"}
+dict1[1] = "Emma Smith"
 
-# print(user)
-# user["interests"] = "Football"
+user={"interests" :"coding"}
+print(user)
 
-# print(dict1)
-# print(user)
+user["interests"] = "Football"
+
+print(dict1)
+print(user)
