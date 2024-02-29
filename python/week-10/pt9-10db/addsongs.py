@@ -23,4 +23,5 @@ def insertSongs():
     except sql.Error as er:
         print(f"Error failed: {er}")
 
-insertSongs()
+if __name__ == "__main__":
+    insertSongs()
