@@ -48,3 +48,5 @@ while mainProgram:
             reports.searchSong()
         case _:
             mainProgram = False
+
+input("Press enter to exit the...")
