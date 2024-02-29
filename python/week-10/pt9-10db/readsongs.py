@@ -26,5 +26,5 @@ def readSongs():
     except sql.Error as er:
         print(f"Error failed: {er}")
 
-
-readSongs()
+if __name__ == "__main__":
+    readSongs()
