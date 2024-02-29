@@ -17,6 +17,22 @@ def searchSong():
             else:
                 print(row)
 
+        elif field in ["Title", "Artist", "Genre"]:
+
+            userInput = input(f"Enter the value for {field}: ")
+
+            dbCursor.execute(f"SELECT * FROM songs WHERE {field} = '%{userInput}'")
+            rows = dbCursor.fetchall()
+
+            if row == None:
+                print(f"No record(s) with {field} {userInput}")
+            else:
+                for records in rows:
+                    print(records)
+
+        else:
+            print(f"Field {field} is invalid")
+
     except sql.OperationalError as e:
         print(f"Operational Failed: {e}")
 
