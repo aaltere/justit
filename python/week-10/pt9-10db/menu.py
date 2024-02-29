@@ -18,6 +18,7 @@ def songsMenu():
 
     while option not in optionList:
         
+        print()
         print(menuChoices)
 
         option = input("Enter an option from the menu choices above: ")
