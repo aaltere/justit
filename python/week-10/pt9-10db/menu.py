@@ -38,18 +38,13 @@ while mainProgram:
 
         case "1":
             readsongs.readSongs()
-            break
         case "2":
             addsongs.insertSongs()
-            break
         case "3":
             updatesongs.updateSong()
-            break
         case "4":
             deletesongs.deleteSong()
-            break
         case "5":
             reports.searchSong()
-            break
         case _:
             mainProgram = False
