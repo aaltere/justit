@@ -16,7 +16,7 @@ def updateSong():
             artist = input("Enter song artist: ")
             genre = input("Enter song genre: ")
 
-            dbCursor.execute("UPDATE songs SET Title = ?, Artist = ?, Genre = ? WHERE SongID = ?", (title, artist, genre))
+            dbCursor.execute("UPDATE songs SET Title = ?, Artist = ?, Genre = ? WHERE SongID = ?", (title, artist, genre, songID))
             dbConnection.commit()
             
             print(f"Record with SongID {songID} updated")
