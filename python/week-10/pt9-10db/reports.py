@@ -42,4 +42,5 @@ def searchSong():
     except sql.Error as er:
         print(f"Error failed: {er}")
 
-searchSong()
+if __name__ == "__main__":
+    searchSong()
