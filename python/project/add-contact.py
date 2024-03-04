@@ -31,10 +31,10 @@ def addContact():
         print(f"Operational Failed: {e}")
 
     except sql.ProgrammingError as pe:
-        print(f"Programming Failed: {e}")
+        print(f"Programming Failed: {pe}")
 
     except sql.Error as er:
-        print(f"Error Failed: {e}")
+        print(f"Error Failed: {er}")
 
 if __name__ == "__main__":
     addContact()
