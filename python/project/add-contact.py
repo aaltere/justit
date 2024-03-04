@@ -7,7 +7,7 @@ def addContact():
     try:
         # get user inputs for data
         name = input("Enter full name: ")
-        phone = input("Enter phone number: ")
+        phone = input("Enter phone number (xxx-xxx-xxxxx): ")
         email = input("Enter email address: ")
         address = input("Enter address: ")
         note = input("Enter note: ")
