@@ -1,0 +1,7 @@
+Enter:
+1 - Print all contacts.
+2 - Add a contact.
+3 - Update a contact.
+4 - Delete a contact.
+5 - Search for a contact
+6 - Exit the contact book.
