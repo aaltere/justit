@@ -27,6 +27,7 @@ let blockType = randomPiece();
 
 // Draw game border
 ctx.strokeStyle = "cyan";
+ctx.lineWidth = 15;
 ctx.strokeRect(gameWindowXStart, gameWindowYStart, gameWidth, gameHeight);
 
 // Create array for game area and assign - to all
