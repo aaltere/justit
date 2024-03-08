@@ -42,7 +42,16 @@ for (let i = 0; i < yBlock; i++)
     }
 }
 
-drawGame(gameArea);
+// Call the main game loop
+gameLoop();
+
+// Function for the main game loop that update frames
+function gameLoop()
+{
+    drawGame(gameArea);
+
+    requestAnimationFrame(gameLoop);
+}
 
 // Function for drawing the game
 function drawGame(gameArea)
