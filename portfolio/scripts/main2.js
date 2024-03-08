@@ -46,6 +46,8 @@ for (let i = 0; i < yBlock; i++)
     }
 }
 
+let blockState = spawnBlock(gameArea, blockLocation, blockType);
+
 // Call the main game loop
 gameLoop();
 
@@ -64,46 +66,46 @@ function spawnBlock(gameArea, blockLocation, blockType)
     switch(blockType)
     {
         case "I":
-            blockLocation[0] = [0, 3];
-            blockLocation[1] = [0, 4];
-            blockLocation[2] = [0, 5];
-            blockLocation[3] = [0, 6];
+            blockLocation[0] = [1, 4];
+            blockLocation[1] = [1, 5];
+            blockLocation[2] = [1, 6];
+            blockLocation[3] = [1, 7];
             break;
         case "O":
-            blockLocation[0] = [0, 4];
-            blockLocation[1] = [0, 5];
-            blockLocation[2] = [1, 4];
-            blockLocation[3] = [1, 5];
+            blockLocation[0] = [1, 5];
+            blockLocation[1] = [1, 6];
+            blockLocation[2] = [2, 5];
+            blockLocation[3] = [2, 6];
             break;
         case "T":
-            blockLocation[0] = [0, 4];
-            blockLocation[1] = [1, 3];
-            blockLocation[2] = [1, 4];
-            blockLocation[3] = [1, 5];
+            blockLocation[0] = [1, 5];
+            blockLocation[1] = [2, 4];
+            blockLocation[2] = [2, 5];
+            blockLocation[3] = [2, 6];
             break;
         case "J":
-            blockLocation[0] = [0, 3];
-            blockLocation[1] = [1, 3];
-            blockLocation[2] = [1, 4];
-            blockLocation[3] = [1, 5];
+            blockLocation[0] = [1, 4];
+            blockLocation[1] = [2, 4];
+            blockLocation[2] = [2, 5];
+            blockLocation[3] = [2, 6];
             break;
         case "L":
-            blockLocation[0] = [0, 5];
-            blockLocation[1] = [1, 3];
-            blockLocation[2] = [1, 4];
-            blockLocation[3] = [1, 5];
+            blockLocation[0] = [1, 6];
+            blockLocation[1] = [2, 4];
+            blockLocation[2] = [2, 5];
+            blockLocation[3] = [2, 6];
             break;
         case "S":
-            blockLocation[0] = [0, 4];
-            blockLocation[1] = [0, 5];
-            blockLocation[2] = [1, 3];
-            blockLocation[3] = [1, 4];
+            blockLocation[0] = [1, 5];
+            blockLocation[1] = [1, 6];
+            blockLocation[2] = [2, 4];
+            blockLocation[3] = [2, 5];
             break;
         case "Z":
-            blockLocation[0] = [0, 3];
-            blockLocation[1] = [0, 4];
-            blockLocation[2] = [1, 4];
-            blockLocation[3] = [1, 5];
+            blockLocation[0] = [1, 4];
+            blockLocation[1] = [1, 5];
+            blockLocation[2] = [2, 5];
+            blockLocation[3] = [2, 6];
             break;
     }
 
