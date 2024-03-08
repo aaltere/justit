@@ -56,6 +56,7 @@ for (let i = 0; i < yBlock; i++)
 }
 
 let blockState = spawnBlock(gameArea, blockLocation, blockType);
+dropPiece(gameArea, blockLocation, blockType);
 
 // Call the main game loop
 gameLoop();
@@ -66,6 +67,23 @@ function gameLoop()
     drawGame(gameArea);
 
     requestAnimationFrame(gameLoop);
+}
+
+function dropPiece(gameArea, blockLocation, blockType)
+{
+    const pieceDrop = setInterval(() =>
+    {
+        for (let i = 0; i < 4; i++)
+        {
+            gameArea[blockLocation[i][0]][blockLocation[i][1]] = "-";
+            blockLocation[i][0]++;
+        }
+
+        for (let i = 0; i < 4; i++)
+        {
+            gameArea[blockLocation[i][0]][blockLocation[i][1]] = blockType;
+        }
+    }, 1000);
 }
 
 // Function for assinging piece positions
