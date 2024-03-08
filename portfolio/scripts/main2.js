@@ -28,6 +28,15 @@ let blockType = randomPiece();
 // Create array for game area#
 let gameArea = [];
 
+// Array for holding piece position
+let pieceI = [[1, 4], [1, 5], [1, 6], [1, 7]];
+let pieceO = [[1, 5], [1, 6], [2, 5], [2, 6]];
+let pieceT = [[1, 5], [2, 4], [2, 5], [2, 6]];
+let pieceJ = [[1, 4], [2, 4], [2, 5], [2, 6]];
+let pieceL = [[1, 6], [2, 4], [2, 5], [2, 6]];
+let pieceS = [[1, 5], [1, 6], [2, 4], [2, 5]];
+let pieceZ = [[1, 4], [1, 5], [2, 5], [2, 6]];
+
 // Assing - to empty space and # to the walls
 for (let i = 0; i < yBlock; i++)
 {
@@ -66,46 +75,25 @@ function spawnBlock(gameArea, blockLocation, blockType)
     switch(blockType)
     {
         case "I":
-            blockLocation[0] = [1, 4];
-            blockLocation[1] = [1, 5];
-            blockLocation[2] = [1, 6];
-            blockLocation[3] = [1, 7];
+            blockLocation = pieceI;
             break;
         case "O":
-            blockLocation[0] = [1, 5];
-            blockLocation[1] = [1, 6];
-            blockLocation[2] = [2, 5];
-            blockLocation[3] = [2, 6];
+            blockLocation = pieceO;
             break;
         case "T":
-            blockLocation[0] = [1, 5];
-            blockLocation[1] = [2, 4];
-            blockLocation[2] = [2, 5];
-            blockLocation[3] = [2, 6];
+            blockLocation = pieceT;
             break;
         case "J":
-            blockLocation[0] = [1, 4];
-            blockLocation[1] = [2, 4];
-            blockLocation[2] = [2, 5];
-            blockLocation[3] = [2, 6];
+            blockLocation = pieceJ;
             break;
         case "L":
-            blockLocation[0] = [1, 6];
-            blockLocation[1] = [2, 4];
-            blockLocation[2] = [2, 5];
-            blockLocation[3] = [2, 6];
+            blockLocation = pieceL;
             break;
         case "S":
-            blockLocation[0] = [1, 5];
-            blockLocation[1] = [1, 6];
-            blockLocation[2] = [2, 4];
-            blockLocation[3] = [2, 5];
+            blockLocation = pieceS;
             break;
         case "Z":
-            blockLocation[0] = [1, 4];
-            blockLocation[1] = [1, 5];
-            blockLocation[2] = [2, 5];
-            blockLocation[3] = [2, 6];
+            blockLocation = pieceZ;
             break;
     }
 
