@@ -21,7 +21,11 @@ const xBlock = 12;
 const gameWindowXStart = (windowWidth / 2) - (gameWidth / 2);
 const gameWindowYStart = (windowHeight / 2) - (gameHeight / 2);
 
-// Create array for game area
+// Location and type of player controlled piece
+let blockLocation = new Array(4);
+let blockType = randomPiece();
+
+// Create array for game area#
 let gameArea = [];
 
 // Assing - to empty space and # to the walls
@@ -51,6 +55,66 @@ function gameLoop()
     drawGame(gameArea);
 
     requestAnimationFrame(gameLoop);
+}
+
+// Function for assinging piece positions
+function spawnBlock(gameArea, blockLocation, blockType)
+{
+    // Set spawn cordinates
+    switch(blockType)
+    {
+        case "I":
+            blockLocation[0] = [0, 3];
+            blockLocation[1] = [0, 4];
+            blockLocation[2] = [0, 5];
+            blockLocation[3] = [0, 6];
+            break;
+        case "O":
+            blockLocation[0] = [0, 4];
+            blockLocation[1] = [0, 5];
+            blockLocation[2] = [1, 4];
+            blockLocation[3] = [1, 5];
+            break;
+        case "T":
+            blockLocation[0] = [0, 4];
+            blockLocation[1] = [1, 3];
+            blockLocation[2] = [1, 4];
+            blockLocation[3] = [1, 5];
+            break;
+        case "J":
+            blockLocation[0] = [0, 3];
+            blockLocation[1] = [1, 3];
+            blockLocation[2] = [1, 4];
+            blockLocation[3] = [1, 5];
+            break;
+        case "L":
+            blockLocation[0] = [0, 5];
+            blockLocation[1] = [1, 3];
+            blockLocation[2] = [1, 4];
+            blockLocation[3] = [1, 5];
+            break;
+        case "S":
+            blockLocation[0] = [0, 4];
+            blockLocation[1] = [0, 5];
+            blockLocation[2] = [1, 3];
+            blockLocation[3] = [1, 4];
+            break;
+        case "Z":
+            blockLocation[0] = [0, 3];
+            blockLocation[1] = [0, 4];
+            blockLocation[2] = [1, 4];
+            blockLocation[3] = [1, 5];
+            break;
+    }
+
+    // Add piece to game board
+    for (let i = 0; i < 4; i++)
+    {
+        gameArea[blockLocation[i][0]][blockLocation[i][1]] = blockType;
+    }
+
+    // Return the initial state for spinning block
+    return 1;
 }
 
 // Function for drawing the game
