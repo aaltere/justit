@@ -98,3 +98,36 @@ function drawGame(gameArea)
         }
     }
 }
+
+// Ruturn a random tetrimino piece
+function randomPiece()
+{
+    let blockType;
+
+    switch(Math.floor(Math.random() * 7))
+    {
+        case 0:
+            blockType = "I";
+            break;
+        case 1:
+            blockType = "O";
+            break;
+        case 2:
+            blockType = "T";
+            break;
+        case 3:
+            blockType = "J";
+            break;
+        case 4:
+            blockType = "L";
+            break;
+        case 5:
+            blockType = "S";
+            break;
+        case 6:
+            blockType = "Z";
+            break;
+    }
+
+    return blockType;
+}
