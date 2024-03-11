@@ -128,7 +128,7 @@ function keyPress(key)
         if (key === "ArrowLeft")
         {
             direction = directions.left;
-            if (!hittingWall() && !horizontalCollistion())
+            if (!hittingWall() && !horizontalCollision())
             {
                 deletePiece();
                 startX--;
@@ -138,7 +138,7 @@ function keyPress(key)
         else if (key === "ArrowRight")
         {
             direction = directions.right;
-            if (!hittingWall() && !horizontalCollistion())
+            if (!hittingWall() && !horizontalCollision())
             {
                 deletePiece();
                 startX--;
@@ -166,4 +166,9 @@ function hittingWall()
         }
         return false;
     }
+}
+
+function horizontalCollision()
+{
+
 }
