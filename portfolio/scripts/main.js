@@ -14,6 +14,7 @@ const startY = 0;
 let score = 0;
 let level = 1;
 
+// text of the game current state
 let winOrLose = "Playing";
 
 // array to hold the pieces and their colours
@@ -36,3 +37,44 @@ let stoppedGameBoard = [...Array(cellHeight)].map(e =>
 // on document load call setupCanvas function
 document.addEventListener("DOMContentLoaded", setupCanvas);
 
+// function for setting up the game window
+function setupCanvas()
+{
+    // have initial value hold reference to the drawing object
+    canvas = document.getElementById("canvas");
+    ctx = canvas.getContext("2d");
+
+    // size of the canvas
+    canvas.width = 936;
+    canvas.height = 956;
+
+    // draw the border for the game
+    ctx.fillStyle = "black";
+    ctx.strokeRect(8, 8, 280, 462);
+
+    // add text to the side of the game window
+    // this holds score
+    // game state
+    // controls
+    ctx.fillStyle = "white";
+    ctx.font = "24px Arial";
+    ctx.fillText("SCORE", 300, 989);
+    ctx.strokeRect(300, 107, 161, 24);
+    ctx.fillText(score.toString(), 310, 127);
+
+    ctx.fillText("LEVEL", 300, 157);
+    ctx.strokeRect(300, 171, 161, 24);
+
+    ctx.fillText("WIN / LOSE", 300, 221);
+    ctx.fillText(winOrLose, 310, 261);
+    ctx.strokeRect(300, 232, 161, 95);
+
+    ctx.fillText("CONTROLS", 300, 354);
+    ctx.strokeRect(300, 366, 161, 104);
+
+    ctx.font = "18px Arial";
+    ctx.fillText("Arrow Left - Left", 310, 388);
+    ctx.fillText("Arrow Right - Right", 310, 413);
+    ctx.fillText("Arrow Up - Rotate clockwise", 310, 438);
+    ctx.fillText("Arrow Down - Down", 310, 463);
+}
