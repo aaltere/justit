@@ -439,7 +439,7 @@ function checkFullRow()
 
     if (rowsToDelete > 0)
     {
-        score += 10;
+        score += (10 * rowsToDelete);
         ctx.fillStyle = "black";
         ctx.fillRect(310, 109, 140, 19);
         ctx.fillStyle = "white";
