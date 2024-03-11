@@ -11,8 +11,8 @@ const cellHeight = 20;
 const cellWidth = 10;
 
 // starting position of the pieces
-const startX = 4;
-const startY = 0;
+let startX = 4;
+let startY = 0;
 
 // level and score
 let score = 0;
@@ -140,6 +140,22 @@ function drawPiece()
         let coorY = coordinateArray[x][y].y;
 
         ctx.fillStyle = currentColour;
+        ctx.fillRect(coorX, coorY, 21, 21);
+    }
+}
+
+function deletePiece()
+{
+    for (let i = 0; i < currentPiece.length; i++)
+    {
+        let x = currentPiece[i][0] + startX;
+        let y = currentPiece[i][1] + startY;
+
+        gameBoard[x][y] = 0;
+
+        let coorX = coordinateArray[x][y].x;
+        let coorY = coordinateArray[x][y].y;
+        ctx.fillStyle = "black";
         ctx.fillRect(coorX, coorY, 21, 21);
     }
 }
