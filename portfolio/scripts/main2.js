@@ -122,34 +122,7 @@ function gameLoop()
 // Function for spinning the block
 function spinBlock(gameArea, blockLocation, blockType, blockState)
 {
-    let state = blockState;
-
-    // Remove old cordinates when function triggered
-    for (let i = 0; i < 4; i++)
-    {
-        gameArea[blockLocation[i][0]][blockLocation[i][1]] = "-";
-    }
-
-    if (blockType === "I")
-    {
-        switch (state)
-        {
-            case 1:
-                blockLocation[0] = [blockLocation[2][0] - 1, blockLocation[2][1]];
-                blockLocation[1] = [blockLocation[0][0] + 1, blockLocation[0][1]];
-                blockLocation[2] = [blockLocation[0][0] + 2, blockLocation[0][1]];
-                blockLocation[3] = [blockLocation[0][0] + 3, blockLocation[0][1]];
-                state = 2;
-                break;
-            case 2:
-                blockLocation[0] = [blockLocation[2][0], blockLocation[2][1] - 1];
-                blockLocation[1] = [blockLocation[0][0], blockLocation[0][1] + 1];
-                blockLocation[2] = [blockLocation[0][0], blockLocation[0][1] + 2];
-                blockLocation[3] = [blockLocation[0][0], blockLocation[0][1] + 3];
-                state = 1;
-                break;
-        }
-    }
+    
 }
 
 // Function for dropping piece
@@ -199,11 +172,11 @@ function spawnBlock(gameArea, blockType)
     // Array for holding piece spawn position
     let pieceI = [[1, 4], [1, 5], [1, 6], [1, 7]];
     let pieceO = [[1, 5], [1, 6], [2, 5], [2, 6]];
-    let pieceT = [[1, 5], [2, 4], [2, 5], [2, 6]];
-    let pieceJ = [[1, 4], [2, 4], [2, 5], [2, 6]];
-    let pieceL = [[1, 6], [2, 4], [2, 5], [2, 6]];
-    let pieceS = [[1, 5], [1, 6], [2, 4], [2, 5]];
-    let pieceZ = [[1, 4], [1, 5], [2, 5], [2, 6]];
+    let pieceT = [[2, 5], [1, 5], [2, 4], [2, 6]];
+    let pieceJ = [[2, 5], [1, 4], [2, 4], [2, 6]];
+    let pieceL = [[2, 5], [1, 6], [2, 4], [2, 6]];
+    let pieceS = [[2, 5], [1, 5], [1, 6], [2, 4]];
+    let pieceZ = [[2, 5], [1, 4], [1, 5], [2, 6]];
 
     // Set spawn cordinates
     switch(blockType)
