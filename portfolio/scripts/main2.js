@@ -42,7 +42,7 @@ for (let i = 0; i < yBlock; i++)
     }
 }
 
-// random the type of block
+// Random the type of block
 let blockType = randomPiece();
 
 let blockLocation = spawnBlock(gameArea, blockType);
@@ -59,19 +59,40 @@ function gameLoop()
     requestAnimationFrame(gameLoop);
 }
 
+// Function for dropping piece
 function dropPiece(gameArea, blockLocation, blockType)
 {
+    // Set interval for every one second
     const pieceDrop = setInterval(() =>
     {
+        // Clear old position on the board and assign new cordinates
         for (let i = 0; i < 4; i++)
         {
             gameArea[blockLocation[i][0]][blockLocation[i][1]] = "-";
             blockLocation[i][0]++;
         }
 
+        // Assign the new cordinates to game board to br drawn
         for (let i = 0; i < 4; i++)
         {
             gameArea[blockLocation[i][0]][blockLocation[i][1]] = blockType;
+        }
+
+        // Check for the lowest point of shape
+        minYPoint = 0;
+
+        for (let i = 0; i < 4; i++)
+        {
+            if (blockLocation[i][0] > minYPoint)
+            {
+                minYPoint = blockLocation[i][0];
+            }
+        }
+
+        // Stop dropping the shape once reaches the wall
+        if (minYPoint >= 20)
+        {
+            clearInterval(pieceDrop);
         }
     }, 1000);
 }
@@ -79,7 +100,7 @@ function dropPiece(gameArea, blockLocation, blockType)
 // Function for assinging piece positions
 function spawnBlock(gameArea, blockType)
 {
-    // aray to hold block positions to be returned
+    // Aray to hold block positions to be returned
     let blockLocation = new Array(4);
 
     // Array for holding piece spawn position
