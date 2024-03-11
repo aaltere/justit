@@ -202,6 +202,49 @@ function keyPress(key)
                 drawPiece();
             }
         }
+        else if (key.key === "ArrowUp")
+        {
+            rotatePiece();
+        }    
+        else if (key.key === "ArrowDown")
+        {
+            pieceDrop();
+        }
+    }
+}
+
+function rotatePiece()
+{
+    let rotation = new Array();
+    let pieceCopy = currentPiece;
+    let PieceBackup;
+
+    for (let i = 0; i < pieceCopy.length; i++)
+    {
+        PieceBackup = [...currentPiece];
+
+        let x = pieceCopy[i][0];
+        let y = pieceCopy[i][1];
+
+        let newX = (lastSquareX() - y);
+        let newY = x;
+        rotation.push([newX, newY]);
+    }
+    deletePiece();
+
+    try 
+    {
+        currentPiece = rotation;
+        drawPiece();
+    }
+    catch (e)
+    {
+        if (e instanceof TypeError)
+        {
+            currentPiece = PieceBackup;
+            deletePiece;
+            drawPiece;
+        }
     }
 }
 
@@ -334,4 +377,21 @@ function verticalCollision()
             drawPiece();
         }
     }
+}
+
+function lastSquareX()
+{
+    let lastX = 0;
+
+    for (let i = 0; i < currentPiece.length; i++)
+    {
+        let square = currentPiece[i];
+
+        if (square[0] > lastX)
+        {
+            lastX = square[0];
+        }
+    }
+
+    return lastX;
 }
