@@ -147,3 +147,23 @@ function keyPress(key)
         }
     }
 }
+
+// fucntion to check if the piece is already at the wall
+// if yes the function will return true
+function hittingWall()
+{
+    for (let i = 0; i < currentPiece.length; i++)
+    {
+        let newX = currentPiece[i][0] + startX;
+        
+        if (newX <= 0 && direction === directions.left)
+        {
+            return true;
+        }
+        else if (newX >= 11 && direction === directions.right)
+        {
+            return true;
+        }
+        return false;
+    }
+}
