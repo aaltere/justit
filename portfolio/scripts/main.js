@@ -4,7 +4,7 @@ let ctx;
 
 // size of the game board
 const cellHeight = 20;
-const cellWidth = 10;
+const cellWidth = 12;
 
 // starting position of the pieces
 let startX = 4;
@@ -129,10 +129,10 @@ function setupCanvas()
 
 function createPieces()
 {
-    pieces.push([[1, 0], [0, 1], [1, 1], [2, 1]]);
     pieces.push([[0, 0], [1, 0], [2, 0], [3, 0]]);
-    pieces.push([[0, 0], [0, 1], [1, 1], [2, 1]]);
     pieces.push([[0, 0], [1, 0], [0, 1], [1, 1]]);
+    pieces.push([[1, 0], [0, 1], [1, 1], [2, 1]]);
+    pieces.push([[0, 0], [0, 1], [1, 1], [2, 1]]);
     pieces.push([[2, 0], [0, 1], [1, 1], [2, 1]]);
     pieces.push([[1, 0], [2, 0], [0, 1], [1, 1]]);
     pieces.push([[0, 0], [1, 0], [1, 1], [2, 1]]);
@@ -280,7 +280,7 @@ function hittingWall()
         {
             return true;
         }
-        else if (newX >= 10 && direction === directions.right)
+        else if (newX >= 11 && direction === directions.right)
         {
             return true;
         }
