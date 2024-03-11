@@ -21,21 +21,8 @@ const xBlock = 12;
 const gameWindowXStart = (windowWidth / 2) - (gameWidth / 2);
 const gameWindowYStart = (windowHeight / 2) - (gameHeight / 2);
 
-// Location and type of player controlled piece
-let blockLocation = new Array(4);
-let blockType = randomPiece();
-
 // Create array for game area#
 let gameArea = [];
-
-// Array for holding piece position
-let pieceI = [[1, 4], [1, 5], [1, 6], [1, 7]];
-let pieceO = [[1, 5], [1, 6], [2, 5], [2, 6]];
-let pieceT = [[1, 5], [2, 4], [2, 5], [2, 6]];
-let pieceJ = [[1, 4], [2, 4], [2, 5], [2, 6]];
-let pieceL = [[1, 6], [2, 4], [2, 5], [2, 6]];
-let pieceS = [[1, 5], [1, 6], [2, 4], [2, 5]];
-let pieceZ = [[1, 4], [1, 5], [2, 5], [2, 6]];
 
 // Assing - to empty space and # to the walls
 for (let i = 0; i < yBlock; i++)
@@ -55,7 +42,10 @@ for (let i = 0; i < yBlock; i++)
     }
 }
 
-let blockState = spawnBlock(gameArea, blockLocation, blockType);
+// random the type of block
+let blockType = randomPiece();
+
+let blockLocation = spawnBlock(gameArea, blockType);
 dropPiece(gameArea, blockLocation, blockType);
 
 // Call the main game loop
@@ -87,8 +77,20 @@ function dropPiece(gameArea, blockLocation, blockType)
 }
 
 // Function for assinging piece positions
-function spawnBlock(gameArea, blockLocation, blockType)
+function spawnBlock(gameArea, blockType)
 {
+    // aray to hold block positions to be returned
+    let blockLocation = new Array(4);
+
+    // Array for holding piece spawn position
+    let pieceI = [[1, 4], [1, 5], [1, 6], [1, 7]];
+    let pieceO = [[1, 5], [1, 6], [2, 5], [2, 6]];
+    let pieceT = [[1, 5], [2, 4], [2, 5], [2, 6]];
+    let pieceJ = [[1, 4], [2, 4], [2, 5], [2, 6]];
+    let pieceL = [[1, 6], [2, 4], [2, 5], [2, 6]];
+    let pieceS = [[1, 5], [1, 6], [2, 4], [2, 5]];
+    let pieceZ = [[1, 4], [1, 5], [2, 5], [2, 6]];
+
     // Set spawn cordinates
     switch(blockType)
     {
@@ -122,7 +124,7 @@ function spawnBlock(gameArea, blockLocation, blockType)
     }
 
     // Return the initial state for spinning block
-    return 1;
+    return blockLocation;
 }
 
 // Function for drawing the game
