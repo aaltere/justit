@@ -215,7 +215,6 @@ function rotatePiece()
     for (let i = 0; i < pieceCopy.length; i++)
     {
         pieceBackup = [...currentPiece];
-
         let x = pieceCopy[i][0];
         let y = pieceCopy[i][1];
 
