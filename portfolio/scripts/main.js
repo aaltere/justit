@@ -67,10 +67,7 @@ function createCoordinateArray()
 }
 
 // on document load call setupCanvas function
-document.addEventListener("DOMContentLoaded", setupCanvas);
-
-// function for setting up the game window
-function setupCanvas()
+document.addEventListener("DOMContentLoaded", () =>
 {
     // have initial value hold reference to the drawing object
     canvas = document.getElementById("canvas");
@@ -125,7 +122,7 @@ function setupCanvas()
     createCoordinateArray();
 
     drawPiece();
-}
+});
 
 function createPieces()
 {
