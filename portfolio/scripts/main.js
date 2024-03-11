@@ -392,3 +392,90 @@ function lastSquareX()
 
     return lastX;
 }
+
+function checkFullRow()
+{
+    let rowsToDelete = 0;
+    let startOfDeletion = 0;
+
+    for (let y = 0; y < cellHeight; y++)
+    {
+        let completed = true;
+
+        for (let x = 0; x < cellWidth; x++)
+        {
+            let square = stoppedGameBoard[x][y];
+
+            if (square === 0 || (typeof square === "undefined"))
+            {
+                completed = false;
+                break;
+            }
+        }
+
+        if (completed)
+        {
+            if (startOfDeletion === 0)
+            {
+                startOfDeletion = y;
+            }
+            rowsToDelete++;
+
+            for (let i = 0; i < cellWidth; i++)
+            {
+                stoppedGameBoard[i][y] = 0;
+                gameBoard[i][y] = 0;
+
+                let coorX = coordinateArray[i][y].x;
+                let coorY = coordinateArray[i][y].y;
+
+                ctx.fillStyle = "black";
+                ctx.fillRect(coorX, coorY, 21, 21);
+            }
+        }
+    }
+
+    if (rowsToDelete > 0)
+    {
+        score += 10;
+        ctx.fillStyle = "black";
+        ctx.fillRect(310, 109, 140, 19);
+        ctx.fillStyle = "white";
+        ctx.fillText(score.toString(), 310, 127);
+
+        moveRowsDown(rowsToDelete, startOfDeletion);
+    }
+}
+
+function moveRowsDown(rowsToDelete, startOfDeletion)
+{
+    for (let i = startOfDeletion - 1;i >= 0; i--)
+    {
+        for (let x = 0; x < cellWidth; x++)
+        {
+            let y2 = i + rowsToDelete;
+            let square = stoppedGameBoard[x][i];
+            let nextSquare = stoppedGameBoard[x][y2];
+
+            if (typeof square === "string")
+            {
+                nextSquare = square;
+                gameBoard[x][y2] = 1;
+                stoppedGameBoard[x][y2] = square;
+
+                let coorX = coordinateArray[x][y2].x;
+                let coorY = coordinateArray[x][y2].y;
+                ctx.fillStyle = nextSquare;
+                ctx.fillRect(coorX, coorY, 21, 21);
+
+                square = 0;
+                gameBoard[x][i] = 0;
+                stoppedGameBoard[x][i] = 0;
+                coorX = coordinateArray[x][i].x;
+                coorY = coordinateArray[x][i].y;
+                ctx.fillStyle = "black";
+                ctx.fillRect(coorX, coorY, 21, 21);
+            }
+        }
+    }
+}
