@@ -10,9 +10,8 @@ const cellWidth = 12;
 let startX = 4;
 let startY = 0;
 
-// level and score
+// score
 let score = 0;
-let level = 1;
 
 // text of the game current state
 let winOrLose = "Playing";
@@ -96,10 +95,6 @@ document.addEventListener("DOMContentLoaded", () =>
     ctx.fillText("SCORE", 300, 98);
     ctx.strokeRect(300, 107, 161, 24);
     ctx.fillText(score.toString(), 310, 127);
-
-    ctx.fillText("LEVEL", 300, 157);
-    ctx.strokeRect(300, 171, 161, 24);
-    ctx.fillText(level.toString(), 310, 190);
 
     ctx.fillText("WIN / LOSE", 300, 221);
     ctx.fillText(winOrLose, 310, 261);
