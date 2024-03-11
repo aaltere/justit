@@ -219,7 +219,7 @@ function horizontalCollision()
     for (let i = 0; i < pieceCopy.length; i++)
     {
         let square = pieceCopy[i];
-        var x = square[0] + startX;
+        let x = square[0] + startX;
         let y = square[1] + startY;
 
         if (direction === directions.left)
@@ -241,4 +241,63 @@ function horizontalCollision()
     }
 
     return collision;
+}
+
+function verticalCollision()
+{
+    let pieceCopy = currentPiece;
+    let collision = false;
+
+    for (let i = 0; i < pieceCopy.length; i++)
+    {
+        let square = pieceCopy[i];
+        let x = square[0] + startX;
+        let y = square[1] + startY;
+
+        if (direction === directions.down)
+        {
+            y++;
+        }
+
+        if (typeof stoppedGameBoard[x][y + 1] === "string")
+        {
+            deletePiece();
+            startY++;
+            drawPiece();
+            collision = true;
+            break;
+        }
+
+        if (y >= 20)
+        {
+            collision = true;
+            break;
+        }
+    }
+
+    if (collision)
+    {
+        if (startY <= 2)
+        {
+            winOrLose = "Game Over";
+        }
+        else
+        {
+            for (let i = 0; i < pieceCopy.length; i++)
+            {
+                let square = pieceCopy[i];
+                let x = square[0] + startX;
+                let y = square[1] + startY;
+
+                stoppedGameBoard[x][y] = currentColour;
+            }
+
+            createPiece();
+
+            direction = directions.idle;
+            startX = 4;
+            startY = 0;
+            drawPiece();
+        }
+    }
 }
