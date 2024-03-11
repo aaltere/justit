@@ -1,3 +1,4 @@
+// value to hold references for drawing the game
 let canvas;
 let ctx;
 
