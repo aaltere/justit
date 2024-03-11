@@ -170,5 +170,32 @@ function hittingWall()
 
 function horizontalCollision()
 {
+    let pieceCopy = currentPiece;
+    let collision = false;
 
+    for (let i = 0; i < pieceCopy.length; i++)
+    {
+        let square = pieceCopy[i];
+        var x = square[0] + startX;
+        let y = square[1] + startY;
+
+        if (direction === directions.left)
+        {
+            x--;
+        }
+        else if (direction === directions.right)
+        {
+            x++;
+        }
+
+        let stoppedValue = stoppedGameBoard[x][y];
+
+        if (typeof stoppedValue === "string")
+        {
+            collision = true;
+            break;
+        }
+    }
+
+    return collision;
 }
