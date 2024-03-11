@@ -171,6 +171,26 @@ function keyPress(key)
     }
 }
 
+function pieceDrop()
+{
+    direction = directions.down;
+
+    if (!verticalCollision())
+    {
+        deletePiece();
+        startY++;
+        drawPiece();
+    }
+}
+
+window.setInterval(() =>
+{
+    if (winOrLose != "Game Over")
+    {
+        pieceDrop();
+    }
+}, 1000);
+
 // fucntion to check if the piece is already at the wall
 // if yes the function will return true
 function hittingWall()
