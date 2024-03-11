@@ -59,6 +59,17 @@ class Coordinates
     }
 }
 
+function createCoordinateArray()
+{
+    for (let y = 9, j = 0; y <= gameHeight; y += 25, j++)
+    {
+        for (let x = 11, i = 0; x <= gameWidth; x += 25, i++)
+        {
+            coordinateArray[i][j] = new Coordinates(x, y);
+        }
+    }
+}
+
 // on document load call setupCanvas function
 document.addEventListener("DOMContentLoaded", setupCanvas);
 
