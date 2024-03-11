@@ -366,6 +366,8 @@ function verticalCollision()
                 stoppedGameBoard[x][y] = currentColour;
             }
 
+            checkFullRow();
+
             createPiece();
 
             direction = directions.idle;
