@@ -2,6 +2,10 @@
 let canvas;
 let ctx;
 
+// size of game board
+const gameWidth = 250;
+const gameHeight = 500;
+
 // size of the game board
 const cellHeight = 20;
 const cellWidth = 10;
@@ -45,12 +49,21 @@ function setupCanvas()
     ctx = canvas.getContext("2d");
 
     // size of the canvas
-    canvas.width = 936;
-    canvas.height = 956;
+    const windowWidth = (canvas.width = window.innerWidth);
+    const windowHeight = (canvas.height = window.innerHeight);
 
-    // draw the border for the game
+    // draw the background for the game
     ctx.fillStyle = "black";
-    ctx.strokeRect(8, 8, 280, 462);
+    ctx.fillRect(0, 0, windowWidth, windowHeight);
+
+    // Get cordinates for game window
+    const gameWindowXStart = (windowWidth / 2) - (gameWidth / 2);
+    const gameWindowYStart = (windowHeight / 2) - (gameHeight / 2);
+
+    // draw the game border
+    ctx.strokeStyle = "grey";
+    ctx.strokeRect(gameWindowXStart, gameWindowYStart, 
+        gameWidth, gameHeight);
 
     // add text to the side of the game window
     // this holds score
