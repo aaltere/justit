@@ -102,7 +102,30 @@ function setupCanvas()
     // ctx.fillText("Arrow Right - Right", 310, 413);
     // ctx.fillText("Arrow Up - Rotate clockwise", 310, 438);
     // ctx.fillText("Arrow Down - Down", 310, 463);
+
+    document.addEventListener("keydown", keyPress);
+
+    createPieces();
+    createPiece();
 }
+
+function createPieces()
+{
+    pieces.push([[1, 0], [0, 1], [1, 1], [2, 1]]);
+    pieces.push([[0, 0], [1, 0], [2, 0], [3, 0]]);
+    pieces.push([[0, 0], [0, 1], [1, 1], [2, 1]]);
+    pieces.push([[0, 0], [1, 0], [0, 1], [1, 1]]);
+    pieces.push([[2, 0], [0, 1], [1, 1], [2, 1]]);
+    pieces.push([[1, 0], [2, 0], [0, 1], [1, 1]]);
+    pieces.push([[0, 0], [1, 0], [1, 1], [2, 1]]);
+}
+function createPiece()
+{
+    let randomPiece = Math.floor(Math.random() * pieces.length);
+    currentPiece = pieces[randomPiece];
+    currentColour = piecesColours[randomPiece];
+}
+
 
 function drawPiece()
 {
