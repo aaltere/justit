@@ -21,6 +21,10 @@ let level = 1;
 // text of the game current state
 let winOrLose = "Playing";
 
+let coordinateArray = [...Array(cellHeight)].map(e =>
+    Array(cellWidth).fill(0));
+let currentPiece = new Array(4);
+
 // array to hold the pieces and their colours
 let pieces = [];
 let piecesColours = [
@@ -90,4 +94,21 @@ function setupCanvas()
     // ctx.fillText("Arrow Right - Right", 310, 413);
     // ctx.fillText("Arrow Up - Rotate clockwise", 310, 438);
     // ctx.fillText("Arrow Down - Down", 310, 463);
+}
+
+function DrawPiece()
+{
+    for (let i = 0; i < currentPiece.length; i++)
+    {
+        let x = currentPiece[i][0] + startX;
+        let y = currentPiece[i][1] + startY;
+
+        gameBoard[x][y] = 1;
+
+        let coorX = coordinateArray[x][y].x;
+        let coorY = coordinateArray[x][y].y;
+
+        ctx.fillStyle = currentColour;
+        ctx.fillRect(coorX, coorY, 21, 21);
+    }
 }
