@@ -48,6 +48,60 @@ let blockType = randomPiece();
 let blockLocation = spawnBlock(gameArea, blockType);
 dropPiece(gameArea, blockLocation, blockType);
 
+window.addEventListener("keydown", e =>
+{
+    // Get most left and most right cordinates of the block
+    let minX = blockLocation[0][1];
+    let maxX = blockLocation[0][1];
+
+    for (let i = 1; i < 4; i++)
+    {
+        if (blockLocation[i][1] > maxX)
+        {
+            maxX = blockLocation[i][1];
+        }
+        else if (blockLocation[i][1] < minX)
+        {
+            minX = blockLocation[i][1];
+        }
+    }
+
+    // Take in user input to detect left and right arrow keys
+    switch (e.key)
+    {
+        case "ArrowLeft":
+            // If block not yet next to the left wall
+            if (minX > 1)
+            {
+                // Remove old position and move cordinates left
+                for (let i = 0; i < 4; i++)
+                {
+                    gameArea[blockLocation[i][0]][blockLocation[i][1]] = "-";
+                    blockLocation[i][1]--;
+                }
+            }
+            break;
+        case "ArrowRight":
+            // If block not yet next to the right wall
+            if (maxX < 10)
+            {
+                // Remove old position and move cordinates right
+                for (let i = 0; i < 4; i++)
+                {
+                    gameArea[blockLocation[i][0]][blockLocation[i][1]] = "-";
+                    blockLocation[i][1]++;
+                }
+            }
+            break;
+    }
+
+    // Assign new cordinates to game board
+    for (let i = 0; i < 4; i++)
+    {
+        gameArea[blockLocation[i][0]][blockLocation[i][1]] = blockType;
+    }
+});
+
 // Call the main game loop
 gameLoop();
 
