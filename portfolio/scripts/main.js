@@ -2,10 +2,6 @@
 let canvas;
 let ctx;
 
-// size of game board
-const gameWidth = 250;
-const gameHeight = 500;
-
 // size of the game board
 const cellHeight = 20;
 const cellWidth = 10;
@@ -23,7 +19,7 @@ let winOrLose = "Playing";
 
 let coordinateArray = [...Array(cellHeight)].map(e =>
     Array(cellWidth).fill(0));
-let currentPiece = new Array(4);
+let currentPiece = [[1, 0], [0, 1], [1, 1], [2, 1]];
 
 const directions = {
     idle: 0,
@@ -61,9 +57,9 @@ class Coordinates
 
 function createCoordinateArray()
 {
-    for (let y = 9, j = 0; y <= gameHeight; y += 25, j++)
+    for (let y = 9, j = 0; y <= 446; y += 23, j++)
     {
-        for (let x = 11, i = 0; x <= gameWidth; x += 25, i++)
+        for (let x = 11, i = 0; x <= 264; x += 23, i++)
         {
             coordinateArray[i][j] = new Coordinates(x, y);
         }
@@ -81,52 +77,54 @@ function setupCanvas()
     ctx = canvas.getContext("2d");
 
     // size of the canvas
-    const windowWidth = (canvas.width = window.innerWidth);
-    const windowHeight = (canvas.height = window.innerHeight);
+    canvas.width = 936;
+    canvas.height = 956;
+
+    ctx.scale(2, 2);
 
     // draw the background for the game
     ctx.fillStyle = "black";
-    ctx.fillRect(0, 0, windowWidth, windowHeight);
-
-    // Get cordinates for game window
-    const gameWindowXStart = (windowWidth / 2) - (gameWidth / 2);
-    const gameWindowYStart = (windowHeight / 2) - (gameHeight / 2);
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     // draw the game border
     ctx.strokeStyle = "grey";
-    ctx.strokeRect(gameWindowXStart, gameWindowYStart, 
-        gameWidth, gameHeight);
+    ctx.strokeRect(8, 8, 280, 462);
 
     // add text to the side of the game window
     // this holds score
     // game state
     // controls
-    // ctx.fillStyle = "white";
-    // ctx.font = "24px Arial";
-    // ctx.fillText("SCORE", 300, 989);
-    // ctx.strokeRect(300, 107, 161, 24);
-    // ctx.fillText(score.toString(), 310, 127);
+    ctx.fillStyle = "white";
+    ctx.font = "21px Arial";
+    ctx.fillText("SCORE", 300, 98);
+    ctx.strokeRect(300, 107, 161, 24);
+    ctx.fillText(score.toString(), 310, 127);
 
-    // ctx.fillText("LEVEL", 300, 157);
-    // ctx.strokeRect(300, 171, 161, 24);
+    ctx.fillText("LEVEL", 300, 157);
+    ctx.strokeRect(300, 171, 161, 24);
+    ctx.fillText(level.toString(), 310, 190);
 
-    // ctx.fillText("WIN / LOSE", 300, 221);
-    // ctx.fillText(winOrLose, 310, 261);
-    // ctx.strokeRect(300, 232, 161, 95);
+    ctx.fillText("WIN / LOSE", 300, 221);
+    ctx.fillText(winOrLose, 310, 261);
+    ctx.strokeRect(300, 232, 161, 95);
 
-    // ctx.fillText("CONTROLS", 300, 354);
-    // ctx.strokeRect(300, 366, 161, 104);
+    ctx.fillText("CONTROLS", 300, 354);
+    ctx.strokeRect(300, 366, 161, 104);
 
-    // ctx.font = "18px Arial";
-    // ctx.fillText("Arrow Left - Left", 310, 388);
-    // ctx.fillText("Arrow Right - Right", 310, 413);
-    // ctx.fillText("Arrow Up - Rotate clockwise", 310, 438);
-    // ctx.fillText("Arrow Down - Down", 310, 463);
+    ctx.font = "16px Arial";
+    ctx.fillText("A - Left", 305, 388);
+    ctx.fillText("D - Right", 305, 413);
+    ctx.fillText("W - Rotate clockwise", 305, 438);
+    ctx.fillText("S - Down", 305, 463);
 
     document.addEventListener("keydown", keyPress);
 
     createPieces();
     createPiece();
+
+    createCoordinateArray();
+
+    drawPiece();
 }
 
 function createPieces()
@@ -184,7 +182,7 @@ function keyPress(key)
 {
     if (winOrLose != "Game Over")
     {
-        if (key === "ArrowLeft")
+        if (key.key === "ArrowLeft")
         {
             direction = directions.left;
             if (!hittingWall() && !horizontalCollision())
@@ -194,13 +192,13 @@ function keyPress(key)
                 drawPiece();
             }
         }
-        else if (key === "ArrowRight")
+        else if (key.key === "ArrowRight")
         {
             direction = directions.right;
             if (!hittingWall() && !horizontalCollision())
             {
                 deletePiece();
-                startX--;
+                startX++;
                 drawPiece();
             }
         }
@@ -239,7 +237,7 @@ function hittingWall()
         {
             return true;
         }
-        else if (newX >= 11 && direction === directions.right)
+        else if (newX >= 10 && direction === directions.right)
         {
             return true;
         }
