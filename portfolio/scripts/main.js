@@ -30,7 +30,7 @@ const directions = {
     down: 1,
     left: 2,
     right: 3
-}
+};
 let direction;
 
 // array to hold the pieces and their colours
@@ -38,17 +38,26 @@ let pieces = [];
 let piecesColours = [
     "cyan", "yellow", "magenta", "blue", "orange", 
     "green", "red"
-]
+];
 // variable for holding current colour for rendering
 let currentColour;
 
 // array for the game board
 let gameBoard = [...Array(cellHeight)].map(e => 
-    Array(cellWidth).fill(0))
+    Array(cellWidth).fill(0));
 
 // array for storing the stopped shapes
 let stoppedGameBoard = [...Array(cellHeight)].map(e => 
-    Array(cellWidth).fill(0))
+    Array(cellWidth).fill(0));
+
+class Coordinates
+{
+    constructor(x, y)
+    {
+        this.x = x;
+        this.y = y;
+    }
+}
 
 // on document load call setupCanvas function
 document.addEventListener("DOMContentLoaded", setupCanvas);
