@@ -69,25 +69,25 @@ function setupCanvas()
     // this holds score
     // game state
     // controls
-    ctx.fillStyle = "white";
-    ctx.font = "24px Arial";
-    ctx.fillText("SCORE", 300, 989);
-    ctx.strokeRect(300, 107, 161, 24);
-    ctx.fillText(score.toString(), 310, 127);
+    // ctx.fillStyle = "white";
+    // ctx.font = "24px Arial";
+    // ctx.fillText("SCORE", 300, 989);
+    // ctx.strokeRect(300, 107, 161, 24);
+    // ctx.fillText(score.toString(), 310, 127);
 
-    ctx.fillText("LEVEL", 300, 157);
-    ctx.strokeRect(300, 171, 161, 24);
+    // ctx.fillText("LEVEL", 300, 157);
+    // ctx.strokeRect(300, 171, 161, 24);
 
-    ctx.fillText("WIN / LOSE", 300, 221);
-    ctx.fillText(winOrLose, 310, 261);
-    ctx.strokeRect(300, 232, 161, 95);
+    // ctx.fillText("WIN / LOSE", 300, 221);
+    // ctx.fillText(winOrLose, 310, 261);
+    // ctx.strokeRect(300, 232, 161, 95);
 
-    ctx.fillText("CONTROLS", 300, 354);
-    ctx.strokeRect(300, 366, 161, 104);
+    // ctx.fillText("CONTROLS", 300, 354);
+    // ctx.strokeRect(300, 366, 161, 104);
 
-    ctx.font = "18px Arial";
-    ctx.fillText("Arrow Left - Left", 310, 388);
-    ctx.fillText("Arrow Right - Right", 310, 413);
-    ctx.fillText("Arrow Up - Rotate clockwise", 310, 438);
-    ctx.fillText("Arrow Down - Down", 310, 463);
+    // ctx.font = "18px Arial";
+    // ctx.fillText("Arrow Left - Left", 310, 388);
+    // ctx.fillText("Arrow Right - Right", 310, 413);
+    // ctx.fillText("Arrow Up - Rotate clockwise", 310, 438);
+    // ctx.fillText("Arrow Down - Down", 310, 463);
 }
