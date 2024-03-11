@@ -215,11 +215,11 @@ function rotatePiece()
 {
     let rotation = new Array();
     let pieceCopy = currentPiece;
-    let PieceBackup;
+    let pieceBackup;
 
     for (let i = 0; i < pieceCopy.length; i++)
     {
-        PieceBackup = [...currentPiece];
+        pieceBackup = [...currentPiece];
 
         let x = pieceCopy[i][0];
         let y = pieceCopy[i][1];
@@ -239,9 +239,9 @@ function rotatePiece()
     {
         if (e instanceof TypeError)
         {
-            currentPiece = PieceBackup;
-            deletePiece;
-            drawPiece;
+            currentPiece = pieceBackup;
+            deletePiece();
+            drawPiece();
         }
     }
 }
@@ -282,8 +282,8 @@ function hittingWall()
         {
             return true;
         }
-        return false;
     }
+    return false;
 }
 
 function horizontalCollision()
