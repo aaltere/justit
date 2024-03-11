@@ -134,6 +134,7 @@ function createPieces()
     pieces.push([[1, 0], [2, 0], [0, 1], [1, 1]]);
     pieces.push([[0, 0], [1, 0], [1, 1], [2, 1]]);
 }
+
 function createPiece()
 {
     let randomPiece = Math.floor(Math.random() * pieces.length);
@@ -354,6 +355,11 @@ function verticalCollision()
         if (startY <= 2)
         {
             winOrLose = "Game Over";
+
+            ctx.fillStyle = "Black";
+            ctx.fillRect(310, 242, 140, 30);
+            ctx.fillStyle = "White";
+            ctx.fillText(winOrLose, 310, 261);
         }
         else
         {
