@@ -44,8 +44,11 @@ for (let i = 0; i < yBlock; i++)
 
 // Random the type of block
 let blockType = randomPiece();
-
+// Spawn block and assign its location to blockLocation
 let blockLocation = spawnBlock(gameArea, blockType);
+// Set initial block state for spinning
+let blockState = 1;
+
 dropPiece(gameArea, blockLocation, blockType);
 
 window.addEventListener("keydown", e =>
@@ -111,6 +114,11 @@ function gameLoop()
     drawGame(gameArea);
 
     requestAnimationFrame(gameLoop);
+}
+
+function spinBlock(gameArea, blockLocation, blockType)
+{
+
 }
 
 // Function for dropping piece
