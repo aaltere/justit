@@ -25,6 +25,14 @@ let coordinateArray = [...Array(cellHeight)].map(e =>
     Array(cellWidth).fill(0));
 let currentPiece = new Array(4);
 
+const directions = {
+    idle: 0,
+    down: 1,
+    left: 2,
+    right: 3
+}
+let direction;
+
 // array to hold the pieces and their colours
 let pieces = [];
 let piecesColours = [
@@ -96,7 +104,7 @@ function setupCanvas()
     // ctx.fillText("Arrow Down - Down", 310, 463);
 }
 
-function DrawPiece()
+function drawPiece()
 {
     for (let i = 0; i < currentPiece.length; i++)
     {
@@ -110,5 +118,32 @@ function DrawPiece()
 
         ctx.fillStyle = currentColour;
         ctx.fillRect(coorX, coorY, 21, 21);
+    }
+}
+
+function keyPress(key)
+{
+    if (winOrLose != "Game Over")
+    {
+        if (key === "ArrowLeft")
+        {
+            direction = directions.left;
+            if (!hittingWall() && !horizontalCollistion())
+            {
+                deletePiece();
+                startX--;
+                drawPiece();
+            }
+        }
+        else if (key === "ArrowRight")
+        {
+            direction = directions.right;
+            if (!hittingWall() && !horizontalCollistion())
+            {
+                deletePiece();
+                startX--;
+                drawPiece();
+            }
+        }
     }
 }
