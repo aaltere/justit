@@ -124,6 +124,8 @@ main {
     font-size: 100px;
 
     margin-bottom: 0.25em;
+
+    color: #f9faf8;
 }
 
 #about-me p {
@@ -136,6 +138,10 @@ main {
     justify-content: center;
 
     margin-top: 50px;
+}
+
+#info h3 {
+    color: #f9faf8;
 }
 
 #personal {
