@@ -149,3 +149,18 @@ main {
 
     margin-left: 50px;
 }
+
+#skills ul {
+    list-style-type: none;
+
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+#skills li {
+    background-color: #26292A;
+    padding: 15px 2px;
+    text-align: center;
+    border-radius: 15px;
+}
