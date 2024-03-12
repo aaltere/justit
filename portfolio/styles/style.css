@@ -142,6 +142,9 @@ main {
     flex: 1;
 
     margin-right: 50px;
+
+    font-size: larger;
+    line-height: 40px;
 }
 
 #skills {
