@@ -112,6 +112,8 @@ main {
     align-items: center;
 
     background-color: rgb(29,29,29);
+
+    color: #A69E93
 }
 
 #about .inner {
@@ -120,13 +122,11 @@ main {
 
 #about h2 {
     font-size: 100px;
-    color: #f9faf8;
 
     margin-bottom: 0.25em;
 }
 
 #about-me p {
-    color: #e5e7eb;
 
     font-size: 20px;
 }
