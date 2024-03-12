@@ -105,7 +105,7 @@ main {
 
 #about {
     min-width: 100vw;
-    min-height: 500px;
+    min-height: 1100px;
 
     display: flex;
     justify-content: center;
