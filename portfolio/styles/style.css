@@ -122,8 +122,6 @@ main {
     font-size: 100px;
     color: #f9faf8;
 
-    max-width: 400px;
-
     margin-bottom: 0.25em;
 }
 
@@ -136,6 +134,8 @@ main {
 #info {
     display: flex;
     justify-content: center;
+
+    margin-top: 50px;
 }
 
 #personal {
@@ -146,6 +146,6 @@ main {
 
 #skills {
     flex: 1;
-    
+
     margin-left: 50px;
 }
