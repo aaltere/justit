@@ -115,7 +115,7 @@ main {
 }
 
 #about .inner {
-    flex-direction: column;
+    flex-direction: row;
 }
 
 #about h2 {
