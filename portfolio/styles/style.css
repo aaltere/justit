@@ -210,3 +210,34 @@ main {
 #projects p {
     font-size: 20px;
 }
+
+/* 
+ * Contact declarations
+ */
+
+ #contact {
+    min-width: 100vw;
+    min-height: 600px;
+
+    display: flex;
+    justify-content: center;
+
+    background: rgba(29,29,29,1);
+    background: linear-gradient(180deg, rgba(29,29,29,1) 0%, rgba(29,30,44,1) 100%);
+}
+
+#contact .inner {
+    flex-direction: column;
+}
+
+#contact h2 {
+    font-size: 100px;
+
+    margin-bottom: 0.25em;
+
+    color: #f9faf8;
+}
+
+#contact p {
+    font-size: 20px;
+}
