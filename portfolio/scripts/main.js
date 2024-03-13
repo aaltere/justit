@@ -6,7 +6,7 @@ window.addEventListener("scroll", () =>
     {
         navbar.style.backgroundColor = "rgba(29, 30, 44, 0.5)";
     }
-    else if (window.scrollY === 0)
+    else if (window.scrollY <= 700)
     {
         navbar.style.backgroundColor = "rgba(29, 30, 44, 1)";
     }
