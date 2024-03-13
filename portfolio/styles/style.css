@@ -173,3 +173,22 @@ main {
     text-align: center;
     border-radius: 15px;
 }
+
+/* 
+ * Project declarations
+ */
+
+#projects {
+    min-width: 100vw;
+    min-height: 600px;
+
+    background-color: rgb(29,29,29);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#projects .inner {
+    flex-direction: column;
+}
