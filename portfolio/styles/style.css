@@ -192,3 +192,11 @@ main {
 #projects .inner {
     flex-direction: column;
 }
+
+#projects h2 {
+    font-size: 100px;
+
+    margin-bottom: 0.25em;
+
+    color: #f9faf8;
+}
