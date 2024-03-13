@@ -246,3 +246,16 @@ main {
 #contact p {
     font-size: 20px;
 }
+
+#footer-content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#footer-content form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
