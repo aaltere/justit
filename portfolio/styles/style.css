@@ -193,6 +193,8 @@ main {
 
     display: flex;
     justify-content: center;
+
+    color: #e5e7eb;
 }
 
 #projects .inner {
@@ -224,6 +226,8 @@ main {
 
     background: rgba(29,29,29,1);
     background: linear-gradient(180deg, rgba(29,29,29,1) 0%, rgba(29,30,44,1) 100%);
+
+    color: #e5e7eb;
 }
 
 #contact .inner {
