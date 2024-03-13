@@ -129,7 +129,6 @@ main {
 }
 
 #about-me p {
-
     font-size: 20px;
 }
 
@@ -182,11 +181,10 @@ main {
     min-width: 100vw;
     min-height: 600px;
 
-    background-color: rgb(29,29,29);
+    background-color: #464848;
 
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 #projects .inner {
@@ -199,4 +197,8 @@ main {
     margin-bottom: 0.25em;
 
     color: #f9faf8;
+}
+
+#projects p {
+    font-size: 20px;
 }
