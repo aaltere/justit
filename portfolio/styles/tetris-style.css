@@ -1,5 +1,5 @@
 #project-info {
-    min-height: 300px;
+    min-height: 500px;
     min-width: 100vw;
 
     display: flex;
@@ -10,4 +10,16 @@
 
     background: rgb(29,30,44);
     background: linear-gradient(180deg, rgba(29,30,44,1) 0%, rgba(29,29,29,1) 100%);
+}
+
+#project-info h2 {
+    font-size: 100px;
+
+    margin-bottom: 0.25em;
+
+    color: #f9faf8;
+}
+
+#project-info p {
+    font-size: 20px;
 }
