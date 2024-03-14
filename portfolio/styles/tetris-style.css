@@ -1,0 +1,11 @@
+#project-info {
+    min-height: 92.5vh;
+    min-width: 100vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgb(29,30,44);
+    background: linear-gradient(180deg, rgba(29,30,44,1) 0%, rgba(29,29,29,1) 100%);
+}
