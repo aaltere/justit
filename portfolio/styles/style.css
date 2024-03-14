@@ -314,6 +314,8 @@ main {
     padding: 0.5em;
 
     width: 100%;
+
+    font-size: 18px;
 }
 
 #contact-form #message {
@@ -326,6 +328,8 @@ main {
     height: 10em;
 
     resize: none;
+
+    font-size: 18px;
 }
 
 #contact-form #submit-btn {
