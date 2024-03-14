@@ -293,9 +293,10 @@ main {
 #contact-form {
     background-color: #4B4D4D;
 
-    margin: 3em 0;
+    margin: 3em 10em 3em 0;
     padding: 2em;
     border-radius: 1em;
+    width: 40%;
 }
 
 #contact-form form label {
