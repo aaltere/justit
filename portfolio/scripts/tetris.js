@@ -73,10 +73,8 @@ document.addEventListener("DOMContentLoaded", () =>
     ctx = canvas.getContext("2d");
 
     // size of the canvas
-    canvas.width = 936;
-    canvas.height = 956;
-
-    ctx.scale(2, 2);
+    canvas.width = 468;
+    canvas.height = 478;
 
     // draw the background for the game
     ctx.fillStyle = "black";
