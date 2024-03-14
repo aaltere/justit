@@ -316,7 +316,14 @@ main {
 }
 
 #contact-form #message {
-    line-height: 6em;
+    margin-top: 0.25em;
+    border: 0;
+    border-radius: 0.25em;
+    padding: 0.5em;
+
+    width: 100%;
+
+    resize: none;
 }
 
 #contact-form #submit-btn {
