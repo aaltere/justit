@@ -310,10 +310,11 @@ main {
     margin-top: 0.25em;
     border: 0;
     border-radius: 0.25em;
+    padding: 0.5em;
 
     width: 100%;
 }
 
 #contact-form #message {
-    height: 6em;
+    line-height: 6em;
 }
