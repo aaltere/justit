@@ -293,6 +293,7 @@ main {
 #contact-form {
     background-color: #4B4D4D;
 
+    margin: 3em 0;
     padding: 2em;
     border-radius: 1em;
 }
@@ -301,4 +302,18 @@ main {
     margin-top: 1em;
 
     font-size: 1.2em;
+
+    color: #e5e7eb;
+}
+
+#contact-form input {
+    margin-top: 0.25em;
+    border: 0;
+    border-radius: 0.25em;
+
+    width: 100%;
+}
+
+#contact-form #message {
+    height: 6em;
 }
