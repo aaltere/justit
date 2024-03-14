@@ -281,6 +281,8 @@ main {
 #contact-links a {
     transition: color 0.5s;
 
+    text-decoration: none;
+
     color: #A69E93;
 }
 
