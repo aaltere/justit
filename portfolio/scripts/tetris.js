@@ -175,7 +175,7 @@ function keyPress(key)
 {
     if (winOrLose != "Game Over")
     {
-        if (key.key === "ArrowLeft")
+        if (key.key === "a")
         {
             direction = directions.left;
             if (!hittingWall() && !horizontalCollision())
@@ -185,7 +185,7 @@ function keyPress(key)
                 drawPiece();
             }
         }
-        else if (key.key === "ArrowRight")
+        else if (key.key === "d")
         {
             direction = directions.right;
             if (!hittingWall() && !horizontalCollision())
@@ -195,11 +195,11 @@ function keyPress(key)
                 drawPiece();
             }
         }
-        else if (key.key === "ArrowUp")
+        else if (key.key === "w")
         {
             rotatePiece();
         }    
-        else if (key.key === "ArrowDown")
+        else if (key.key === "s")
         {
             pieceDrop();
         }
