@@ -318,3 +318,12 @@ main {
 #contact-form #message {
     line-height: 6em;
 }
+
+#contact-form #submit-btn {
+    margin-top: 2em;
+
+    width: 6em;
+    height: 3em;
+
+    align-self: flex-end;
+}
