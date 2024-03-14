@@ -257,7 +257,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: start;
 }
 
 #contact-links ul {
@@ -288,4 +288,17 @@ main {
 
 #contact-links a:hover {
     color: #e5e7eb;
+}
+
+#contact-form {
+    background-color: #4B4D4D;
+
+    padding: 2em;
+    border-radius: 1em;
+}
+
+#contact-form form label {
+    margin-top: 1em;
+
+    font-size: 1.2em;
 }
