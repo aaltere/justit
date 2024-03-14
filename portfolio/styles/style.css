@@ -259,3 +259,31 @@ main {
     justify-content: center;
     align-items: center;
 }
+
+#contact-links ul {
+    list-style-type: none;
+
+    font-size: 1.5em;
+
+    padding: 0;
+}
+
+#contact-links li:first-child {
+    font-size: 1.2em;
+
+    margin-bottom: 1.5em;
+}
+
+#contact-links li {
+    margin: 0.75em 0;
+}
+
+#contact-links a {
+    transition: color 0.5s;
+
+    color: #A69E93;
+}
+
+#contact-links a:hover {
+    color: #e5e7eb;
+}
