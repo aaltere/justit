@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Peter Ashworth - Junior Software Developer, Frontend & Backend.</title>
+
+        <link rel="stylesheet" href="styles/style.css">
+
+        <script src="../scripts/tetris.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#">#home</a></li>
+                    <li><a href="#about-me">#about</a></li>
+                    <li><a href="#projects">#projects</a></li>
+                    <li><a href="#contact">#contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <canvas id="canvas"></canvas>
+        </main>
+        <footer id="contact">
+            <div class="inner">
+                <h2>#contact</h2>
+                <p>
+                    Feel free to Contact me by submitting the form below and I will get back to you as soon as possible
+                </p>
+                <div id="footer-content">
+                    <section id="contact-links">
+                        <ul>
+                            <li><a href="mailto:peter0ashworth@hotmail.com">peter0ashworth@hotmail.com</a></li>
+                            <li><a href="https://www.linkedin.com/in/peter-ashworth-9583bb1a4/">LinkedIn</a></li>
+                            <li><a href="https://github.com/aaltere">GitHub</a></li>
+                        </ul>
+
+                        <p>© Copyright 2024 - Made by Peter Ashworth</p>
+                    </section>
+                    <section id="contact-form">
+                        <form action="mailto:peter0ashworth@hotmail.com" 
+                            method="post" enctype="text/plain">
+    
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="name" required>
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" required>
+                            <label for="message">Message</label>
+                            <textarea name="message" id="message" required></textarea>
+                            <input type="submit" value="Submit" id="submit-btn">
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
