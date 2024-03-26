@@ -24,7 +24,7 @@ def searchSong():
             dbCursor.execute(f"SELECT * FROM songs WHERE {field} = '%{userInput}'")
             rows = dbCursor.fetchall()
 
-            if row == None:
+            if rows == None:
                 print(f"No record(s) with {field} {userInput}")
             else:
                 for records in rows:
