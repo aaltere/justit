@@ -145,7 +145,7 @@
     grid-template-columns: repeat(3, 1fr);
 }
 
-#project .project-title {
+.project .project-title {
     color: #f9faf8;
     text-decoration: none;
 }
