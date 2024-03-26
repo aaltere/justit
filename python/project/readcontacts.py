@@ -14,7 +14,7 @@ def readContacts():
             # print a nicely formatted table for te contacts
             print("  id | name                 | phone         "
                   "| email                      " +
-                  "| address                                    | note")
+                  "| address                          | note")
             print("*" * 150)
 
             for contact in contacts:
