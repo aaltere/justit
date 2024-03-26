@@ -1,5 +1,9 @@
 # import all oif the functions we have created for the program
-import addcontact, readcontacts, updatecontact, searchcontact, deletecontact
+import addcontact 
+import readcontacts
+import updatecontact
+import searchcontact
+import deletecontact
 
 # create fucntion to read menu file
 def readFile(filePath):
