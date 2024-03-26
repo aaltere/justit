@@ -14,7 +14,7 @@ def searchContact():
             contactID = int(input("Enter the id: "))
             
             # fetch the row of the specified id
-            dbCursor.execute("SELECT * FROM contacts WHERE contact_id = ?"
+            dbCursor.execute("SELECT * FROM contacts WHERE contact_id = ?",
                              (contactID,))
             row = dbCursor.fetchone()
 
