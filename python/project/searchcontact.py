@@ -37,7 +37,7 @@ def searchContact():
             rows = dbCursor.fetchall()
 
             # check if the name exists
-            if row == None:
+            if rows == None:
                 print(f"No contact with the name {name}")
             else:
                 # print search result
