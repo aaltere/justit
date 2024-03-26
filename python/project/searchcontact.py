@@ -41,8 +41,7 @@ def searchContact():
                 print(f"No contact with the name {name}")
             else:
                 # print search result
-                for contact in rows:
-                    print(contact)
+                print(rows)
 
     # handling any type of errors
     except sql.OperationalError as e:
