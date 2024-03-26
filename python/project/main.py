@@ -52,6 +52,7 @@ while mainProgramLoop:
 
     # set a variable to the menu input function
     menuOption = mainMenu()
+    print()
 
     # match input and execute the appropriate fucntion
     match menuOption:
