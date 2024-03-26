@@ -32,8 +32,7 @@ def searchContact():
 
             # fetch rows with user input
             dbCursor.execute(
-                f"SELECT * FROM contacts WHERE full_name = '%{name}'"
-            )
+                "SELECT * FROM contacts WHERE full_name = ?", (name,))
             rows = dbCursor.fetchall()
 
             # check if the name exists
